@@ -13,7 +13,7 @@
 <br>
 
 **NRC**
-### **3690**
+### **4948**
 
 <br>
 
@@ -22,15 +22,15 @@
 <br>
 
 **Docente**
-### **Mayta Guillermo, Jorge Luis**
+### **Eduardo Martin Reyes Rodriguez**
 
 <br>
 
 **Equipo**
-### **IdeaForge**
+### **NOMBRE CAMBIAR**
 
 **Proyecto**
-### **IdeaForge**
+### **NOMBRE CAMBIAR**
 
 <br>
 
@@ -38,16 +38,15 @@
 
 | Código | Apellidos y Nombres |
 | :---: | :--- |
-| **u202312109** | Cossar Sánchez, Eduardo |
-| **u202312874** | Mostajo, María Fernanda |
-| **u202315649** | Aguirre Eneque, Joan Elías |
-| **u202417448** | Huaman Cuba, Johan Giovani |
-| **u202310129** | Navarro Correa, César Augusto |
+| **u202317450** | Choy Robles, Vanessa May Lang |
+| **CODIGO** | NOMBRE CAMBIAR |
+| **CODIGO** | NOMBRE CAMBIAR |
+| **CODIGO** | NOMBRE CAMBIAR |
 
 <br>
 
 ### **Período 202610**
-### **Julio 2026**
+### **Setiembre 2026**
 
 </div>
 
@@ -60,7 +59,7 @@
 
 | Versión | Fecha | Autor(es) | Descripción de modificación |
 |:-------:|:-----:|:---------|:---------------------------|
-| **V1.0** | 2026-07-01 | Todos | Entrega del informe final |
+| **V1.0** | 2026-09-18 | Todos | Entrega del avance 1 |
 
 <br>
 

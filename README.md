@@ -14,7 +14,7 @@
 
 **NRC**
 ### **4948**
-
+  
 <br>
 
 ## **Informe del Trabajo Final**
@@ -188,23 +188,74 @@
 
 ### 1.1.1. Descripción de la Startup
 
+PredictiveTech ofrece una solución tecnológica especializada con el aplicativo B2B "PredictiveMaintain", enfocada en la monitorización y mantenimiento predictivo de maquinaria industrial pesada y de manufactura. Mediante el análisis continuo de variables físicas recolectadas por sensores IoT (vibración, temperatura, nivel de ruido, presión y amperaje), la plataforma procesa patrones anómalos para diagnosticar fallas incipientes antes de que provoquen detenciones no programadas en la línea de producción.
+
+Nuestra propuesta se basa en un modelo con suscripciones escalables según el volumen de activos conectados. El objetivo central de PredictiveTech es reducir los costos operativos por paradas intempestivas, extender la vida útil de los equipos industriales y optimizar la asignación de personal técnico mediante órdenes de trabajo automatizadas y guiadas por analítica predictiva.
+
+Misión: Proporcionar una plataforma integral de analítica predictiva e IoT que maximice la disponibilidad operativa de las plantas industriales, reduciendo costos de mantenimiento reactivo y mejorando la seguridad laboral.
+
+Visión: Convertirnos en el software de gestión predictiva industrial preferido en la región, impulsando la transformación hacia la Industria 4.0 a través de interfaces intuitivas y modelos predictivos de alta precisión.
+
 ### 1.1.2. Perfiles de integrantes del equipo
+
+
 
 ## 1.2. Solution Profile
 
 ### 1.2.1. Antecedentes y problemática
+En la industria manufacturera y minera del Perú y Latinoamérica, el mantenimiento industrial ha dependido tradicionalmente de esquemas reactivos (reparar cuando el equipo falla) o preventivos rígidos (mantenimiento programado por calendario, independientemente del desgaste real del equipo). De acuerdo con estudios del sector industrial, hasta un 35% de los costos operativos en plantas de producción derivan de fallas imprevistas en la maquinaria, lo que ocasiona pérdidas millonarias debido a líneas de producción paradas, compras de repuestos de emergencia y horas extra de mantenimiento no planificado.
+
+What
+
+El problema principal es la incapacidad de anticipar fallas catastróficas o progresivas en maquinaria crítica debido a la falta de monitoreo continuo en tiempo real y herramientas de analítica predictiva.
+
+When
+
+El problema surge de manera continua durante los ciclos de operación intensiva de la planta, agudizándose cuando componentes clave (como rodamientos, motores o reductores) sufren desgaste acelerado por sobrecarga o falta de lubricación.
+
+Where
+
+Ocurre en plantas industriales, fábricas de procesamiento, plantas mineras y centros logísticos donde la continuidad operativa depende críticamente del correcto funcionamiento de equipos electromecánicos.
+
+Who
+
+Afecta a los Jefes de Mantenimiento / Gerentes de Planta, quienes deben responder por los costos de parada y la producción; y a los Técnicos de Mantenimiento, quienes carecen de diagnósticos previos exactos sobre qué componente específico está fallando.
+
+Why
+
+Esta situación persiste debido al alto costo de las herramientas tradicionales de monitoreo de condición (CMMS tradicionales sin IoT) y a la complejidad técnica de integrar sensores en arquitecturas legadas.
+
+How
+
+El monitoreo se realiza mediante inspecciones manuales periódicas con equipos portátiles o simple inspección visual/auditiva, lo que genera diagnósticos tardíos y propensos al error humano.
+
+How much
+
+Paradas de producción no planificadas pueden generar pérdidas estimadas en miles de dólares por hora de inactividad, elevando los costos de mantenimiento preventivo hasta en un 40% adicional por reemplazo prematuro de piezas en buen estado.
 
 ### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statements
 
+Actualmente, las plantas de producción industrial en el país sufren constantes interrupciones no programadas en sus líneas de fabricación debido a fallas inesperadas en maquinaria crítica. Las herramientas actuales de gestión de mantenimiento son mayoritariamente reactivas o manuales, impidiendo que el personal técnico intervenga con precisión antes de un fallo grave.
+
+¿Cómo podríamos proporcionar a los equipos de mantenimiento un sistema de monitoreo en tiempo real y alertas predictivas que les permita anticipar fallas en activos industriales, reduciendo las paradas no programadas y optimizando la programación de reparaciones?
+
 #### 1.2.2.2. Lean UX Assumptions
+
+
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+
+
 #### 1.2.2.4. Lean UX Canvas
 
+
+
 ## 1.3. Segmentos objetivo
+
+
 
 # Capítulo II: Requirements Development and Software Solution Design
 
@@ -212,15 +263,31 @@
 
 ### 2.1.1. Análisis competitivo
 
+
+
+
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-## 2.2. Entrevistas
 
+
+
+## 2.2. Entrevistas
 ### 2.2.1. Diseño de entrevistas
+
+
+
 
 ### 2.2.2. Registro de entrevistas
 
+
+
+
 ### 2.2.3. Análisis de entrevistas
+
+
+
+
 
 ## 2.3. Needfinding
 

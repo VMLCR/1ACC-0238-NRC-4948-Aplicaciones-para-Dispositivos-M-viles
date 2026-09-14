@@ -199,8 +199,8 @@ Visión: Convertirnos en el software de gestión predictiva industrial preferido
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <p align="center">
-    <img src="assets/integrantes/Choy.jpeg" alt="Choy" width="170px"/>
-    
+    <img src="assets/cap1/choy.jpeg" alt="Choy" width="170px"/>
+
 - Choy Robles, Vanessa May Lang - u202317450 (Ingeniería de Software)
 <p>Soy estudiante de Ingeniería de Software con experiencia en distintos lenguajes de programación, diseño UX/UI y trabajo bajo metodologías ágiles como Scrum. Aporto al equipo una visión orientada tanto a la funcionalidad como a la experiencia del usuario, contribuyendo en el desarrollo y mejora continua del producto. Me caracterizo por mi responsabilidad, cumplimiento de plazos y participación activa en el trabajo colaborativo. 
 </p>
@@ -224,11 +224,6 @@ Visión: Convertirnos en el software de gestión predictiva industrial preferido
 <p>
 Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con conocimientos de Marketing y estoy interesada en el UX Design y data analysis. Experiencia en trabajos de creación de startups en el ámbito laboral, lo que fortalece mis capacidades tanto en trabajos grupales e individuales como para las bases de un proyecto.
 </p>
-
-<p align="center">
-    <img src="assets/integrantes/Vara.jpeg" alt="Vara" width="170px"/>
-</p>
-- XXXX
 
 
 ## 1.2. Solution Profile
@@ -381,7 +376,7 @@ Sabremos que tendremos éxito cuando: Se incremente en un 25% el número de órd
 
 #### 1.2.2.4. Lean UX Canvas
 
-![Lean-UX-Canvas](assets/cap1/lean-ux-canvas.png)
+![Lean-UX-Canvas](assets/cap1/lean-ux-canvas.jpg)
 
 
 ## 1.3. Segmentos objetivo
@@ -454,30 +449,90 @@ De acuerdo con la Sociedad Nacional de Industrias (SNI) y análisis del sector m
 
 ### 2.1.1. Análisis competitivo
 
+<a id="tabla-2"></a>
+**Tabla 2:** *Matriz de Análisis Competitivo para el Sistema de Mantenimiento Predictivo.*
 
+| Criterio / Característica | **PredictiveMaintain (Nuestra Solución)** | **Fracttal One** | **Fiix (Rockwell Automation)** | **Augury (Halo)** |
+| :--- | :--- | :--- | :--- | :--- |
+| **Perfil General** | SaaS B2B peruano focalizado en analítica predictiva IoT e ingesta de telemetría para PYMEs y medianas industrias. | CMMS/EAM basado en nube con fuerte presencia en Latinoamérica enfocado en gestión de activos. | CMMS empresarial global de alta complejidad integrado al ecosistema de automatización industrial. | Solución especializada de IA y hardware IoT dedicada exclusivamente a la salud de máquinas rotativas. |
+| **Monitoreo IoT en Tiempo Real** | **Alto:** Captura en tiempo real de temperatura, vibración y presión con tableros dinámicos. | **Medio:** Requiere integraciones API externas complejas para lectura en vivo de sensores. | **Alto:** Excelente integración con PLC/SCADA Rockwell, pero costoso e inaccesible para PYMEs. | **Alto:** Sensores propios continuos optimizados para equipos industriales críticos. |
+| **Analítica Predictiva (RUL y Anomalías)** | **Alto:** Algoritmos dedicados para estimar la Vida Útil Restante (RUL) y detectar desvíos incipientes. | **Bajo:** Enfoque principal en mantenimiento preventivo por calendario/lecturas de contadores. | **Medio:** Incluye módulos predictivos avanzados únicamente en licencias Enterprise. | **Muy Alto:** Modelos de Machine Learning altamente entrenados en fallas mecánicas. |
+| **Gestión de Órdenes de Trabajo (OT)** | **Sí:** Generación automática de OT activada por sobrepaso de umbrales críticos de sensores. | **Muy Alto:** Workflow avanzado de aprobación, firmas digitales e inventarios. | **Muy Alto:** Gestión completa de flujo de trabajo industrial, repuestos y costos. | **Limitado:** Se enfoca en el diagnóstico; requiere integrarse a un CMMS externo para gestión de OT. |
+| **Facilidad de Uso e Interfaz** | **Alta:** Diseñado para **Operadores** a pie de planta y **Jefes de Mantenimiento** con curva rápida. | **Alta:** Interfaz moderna y multiplataforma orientada a la gestión. | **Media/Baja:** Interfaz compleja con requerimiento de capacitación técnica prolongada. | **Media:** Orientada principalmente a ingenieros de confiabilidad y analistas de datos. |
+| **Modelo de Precios y Costo** | **Accesible:** Suscripción SaaS por activo conectado, adaptada al mercado industrial regional. | **Medio:** Cobro por usuario/mes; escala rápidamente según los módulos habilitados. | **Alto:** Licenciamiento costoso en dólares orientado a grandes corporaciones. | **Muy Alto:** Modelo "Hardware-as-a-Service" con contratos anuales elevados. |
 
-
+---
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
+* **Integración vertical a Orden de Trabajo" sin fricción:** PredictiveMaintain conecta directamente la anomalía detectada por el sensor con la creación automática de la Orden de Trabajo (OT), reduciendo el tiempo de atención de fallas.
+* **Enfoque en accesibilidad tecnológica para el mercado:** Ofrecer un modelo  escalable por volumen de activos conectados, haciendo viable la adopción de mantenimiento predictivo para medianas y PYMEs industriales que no pueden financiar licencias Enterprise como Fiix.
+* **Diseño centrado en la usabilidad del Operador de Planta:** Desarrollar interfaces con códigos cromáticos de alerta de lectura rápida y navegación simplificada, reduciendo los tiempos de capacitación y facilitando el reporte directo desde la línea de producción.
+* **Métricas predictivas simplificadas:** Presentar indicadores de Vida Útil Restante y niveles de riesgo de forma comprensible para los **Jefes de Mantenimiento**, evitando reportes matemáticos densos que requieren ingenieros especializados en vibraciones.
 
-
+---
 
 ## 2.2. Entrevistas
 ### 2.2.1. Diseño de entrevistas
 
+Para la validación de necesidades del proyecto, se diseñaron dos guías de entrevistas semiestructuradas orientadas a los dos segmentos objetivo del sistema:
 
+**Guía de Entrevista - Segmento 1: Operadores de Maquinaria y Planta**
+* **Propósito:** Comprender los desafíos diarios en la detección de fallas, la usabilidad de herramientas actuales y la seguridad durante la operación.
+* **Preguntas:**
+  1. ¿Cuáles son las máquinas o activos más críticos en su turno de trabajo y qué tipo de fallas suelen presentar?
+  2. ¿Cómo detecta actualmente que una máquina está empezando a fallar durante su turno? (¿ruido, temperatura, vibración?)
+  3. Cuando nota una irregularidad, ¿cuál es el procedimiento exacto para reportarla y cuánto tiempo toma?
+  4. ¿Qué dificultades encuentra al registrar información en bitácoras físicas o sistemas actuales durante su trabajo?
+  5. Si contara con una pantalla en planta o aplicación que le alerte con colores el estado del equipo antes de que falle, ¿cómo cambiaría su trabajo diario?
 
+**Guía de Entrevista - Segmento 2: Área de Mantenimiento y Gestión Operativa**
+* **Propósito:** Analizar la toma de decisiones, la gestión de presupuesto por paradas no programadas, el uso de métricas (OEE) y la asignación de órdenes de trabajo.
+* **Preguntas:**
+  1. ¿Cómo organizan actualmente el plan de mantenimiento de la planta? (¿Reactivo, preventivo por calendario o predictivo?)
+  2. ¿Cuánto le cuesta a la planta una parada no programada de línea y cuáles son las causas más comunes?
+  3. ¿Cómo asignan y hacen seguimiento a las Órdenes de Trabajo (OT) para el equipo técnico?
+  4. ¿Qué métricas o indicadores (OEE, costos de repuestos, tiempo medio entre fallas) utiliza para evaluar la eficiencia del área?
+  5. ¿Qué limitantes encuentra en las herramientas actuales (Excel, CMMS tradicional) al intentar predecir una falla en activos críticos?
+  6. ¿Qué características indispensables debería tener un software de mantenimiento predictivo para ser adoptado en su empresa?
+
+---
 
 ### 2.2.2. Registro de entrevistas
 
 
+**Entrevista 1 (Segmento 1: Operadores de Maquinaria y Planta)**
+* **Entrevistado:** Jorge Luis Mendoza (38 años)
+* **Cargo:** Operador Senior de Maquinaria y Embotellado
+* **Ubicación / Empresa:** Planta Industrial en Ate, Lima
+* **Duración:** 25 minutos
+* **Resumen de respuestas:** Jorge comenta que las fajas transportadoras y los motores de llenado sufren sobrecalentamientos constantes. Actualmente detectan las fallas cuando sienten "un olor a quemado o una vibración fuerte". Reportar la falla requiere llenar un formato físico y buscar al supervisor, lo que puede tomar hasta 40 minutos mientras la máquina sigue operando forzada. Muestra gran interés en tener un panel con colores verde/amarillo/rojo para detener o ajustar la máquina a tiempo.
+* **Evidencia en video / audio:** [Enlace a grabación de entrevista 1]
 
+**Entrevista 2 (Segmento 2: Área de Mantenimiento y Gestión Operativa)**
+* **Entrevistado:** Ing. Carlos Ramírez (46 años)
+* **Cargo:** Jefe de Mantenimiento Planta
+* **Ubicación / Empresa:** Empresa de Procesamiento de Plásticos, Callao
+* **Duración:** 35 minutos
+* **Resumen de respuestas:** El Ing. Ramírez señala que las paradas no programadas les cuestan un promedio de $3,500 por hora de inactividad. Manejan el mantenimiento preventivo con Excel y tarjetas físicas. Su mayor problema es que reemplazan piezas en buen estado por calendario, o intervienen tarde cuando el rodamiento ya destruyó el eje del motor. Requiere un sistema que le diga la **Vida Útil Restante (RUL)** estimada del activo y que genere automáticamente la Orden de Trabajo para enviar al técnico inmediatamente.
+* **Evidencia en video / audio:** [Enlace a grabación de entrevista 2]
+
+---
 
 ### 2.2.3. Análisis de entrevistas
 
 
+1. Detección tardía y métodos empíricos (Operadores)
+* **Hallazgo:** Los operadores dependen en más de un 80% de sus sentidos (oído, tacto, olor) para detectar fallas en las máquinas.
+* **Necesidad:** Requieren sensores IoT que traduzcan las lecturas de vibración y temperatura en **indicadores visuales simples y en tiempo real** directos en pantalla, evitando que dependan de la percepción humana.
 
+2. Alto costo de la inactividad no planificada (Gestores de Mantenimiento)
+* **Hallazgo:** Las paradas intempestivas representan sobrecostos severos por horas extra de personal técnico e importación de repuestos de emergencia.
+* **Necesidad:** Los jefes de planta demandan algoritmos de **detección de anomalías** e indicadores de **RUL (Remaining Useful Life)** para programar las intervenciones durante los cambios de turno o paradas planificadas.
+
+3. Fricción en el flujo de reporte y asignación de órdenes (Proceso)
+* **Hallazgo:** El uso de bitácoras de papel o reportes verbales genera pérdidas de tiempo de entre 30 y 60 minutos desde que se detecta el problema hasta que se emite la orden de reparación.
+* **Necesidad:** El sistema debe **automatizar la generación de Órdenes de Trabajo (OT)** cuando los sensores superen los umbrales de alerta predefinidos, enviando notificaciones directas al personal de turno.
 
 
 ## 2.3. Needfinding

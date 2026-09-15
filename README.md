@@ -541,7 +541,7 @@ En esta sección se presentan los artefactos resultantes del proceso de análisi
 
 ### 2.3.1. User Personas
 ![User Persona - JefeDeMantenimiento](assets/cap2/userPersonas/renzoHuaman.png)
-![User Persona - GerenteDePlanta](assets/cap2/userPersonas/jhonatanTorres.png)
+![User Persona - Tecnico](assets/cap2/userPersonas/jhonatanTorres.png)
 ### 2.3.2. User Task Matrix
 
 ### 2.3.3. User Journey Mapping
@@ -646,6 +646,11 @@ En esta sección se presenta la especificación de los requisitos de PredictiveM
 
 
 ### 2.4.2. Impact Mapping
+
+![Impact Mapping Business Goal 1](assets/cap2/impactMapping/businessGoal.png)
+![Impact Mapping Business Goal 2](assets/cap2/impactMapping/businessGoal2n.png)
+![Impact Mapping Business Goal 3](assets/cap2/impactMapping/businessGoal3.png)
+
 
 ### 2.4.3. Product Backlog
 

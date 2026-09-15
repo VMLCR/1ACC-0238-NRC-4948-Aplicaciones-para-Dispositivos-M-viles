@@ -544,6 +544,22 @@ En esta sección se presentan los artefactos resultantes del proceso de análisi
 ![User Persona - Tecnico](assets/cap2/userPersonas/jhonatanTorres.png)
 ### 2.3.2. User Task Matrix
 
+| Tarea | Renzo Huamán (Jefe de Mantenimiento) — Frecuencia / Importancia | Jhonatan Torres (Técnico de Mantenimiento) — Frecuencia / Importancia |
+|---|---|---|
+| Inspeccionar el estado físico de la maquinaria | Semanal / Media | Diaria / Alta |
+| Detectar señales de anomalía durante la operación (ruido, vibración, calor) | No aplica | Diaria / Alta |
+| Reportar una anomalía detectada al responsable correspondiente | Diaria / Alta (recibe reportes) | Diaria / Alta (emite reportes) |
+| Registrar la intervención o mantenimiento realizado | Semanal / Media (revisa registros) | Diaria / Alta |
+| Priorizar qué activos atender primero según su criticidad | Diaria / Alta | No aplica |
+| Coordinar la asignación de personal técnico para una intervención | Diaria / Alta | No aplica |
+| Planificar el presupuesto y los recursos de mantenimiento | Mensual / Alta | No aplica |
+| Revisar el historial de fallas de un activo antes de intervenir | Semanal / Media | Diaria / Media |
+| Verificar el cumplimiento de protocolos de seguridad antes de operar un equipo | Semanal / Media (supervisión) | Diaria / Alta |
+| Sustentar ante la gerencia los resultados del área de mantenimiento | Mensual / Alta | No aplica |
+| Capacitarse en nuevas tecnologías o procedimientos de mantenimiento | Mensual / Media | Mensual / Media |
+| Comunicar el estado de una intervención al turno siguiente | No aplica | Diaria / Alta |
+
+
 ### 2.3.3. User Journey Mapping
 
 ### 2.3.4. Empathy Mapping

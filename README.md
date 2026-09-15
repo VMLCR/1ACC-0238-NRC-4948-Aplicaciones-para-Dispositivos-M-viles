@@ -540,7 +540,7 @@ Para la validación de necesidades del proyecto, se diseñaron dos guías de ent
 En esta sección se presentan los artefactos resultantes del proceso de análisis de la información recolectada en las entrevistas a los segmentos objetivo de PredictiveMaintain. A partir de los hallazgos obtenidos, el equipo construye los User Personas, el User Task Matrix, los User Journey Maps, los Empathy Maps, el Big Picture EventStorming y el Ubiquitous Language del dominio, buscando comprender en profundidad las necesidades, tareas y comportamientos de los Jefes de Mantenimiento/Gerentes de Planta y los Técnicos de Mantenimiento como actores principales del negocio.
 
 ### 2.3.1. User Personas
-
+![User Persona - JefeDeMantenimiento](assets/cap2/renzoHuaman.png)
 ### 2.3.2. User Task Matrix
 
 ### 2.3.3. User Journey Mapping

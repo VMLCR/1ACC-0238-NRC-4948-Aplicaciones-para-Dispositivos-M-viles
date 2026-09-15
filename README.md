@@ -559,13 +559,75 @@ Para la validación de necesidades del proyecto, se diseñaron dos guías de ent
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
+En esta sección se introducen y explican las decisiones de nivel estratégico aplicando Domain-Driven Design (DDD) para descomponer el sistema PredictiveMaintain en subconjuntos con límites naturales o Bounded Contexts.  
+
 ### 2.5.1. EventStorming
+
+El equipo organizó una sesión de EventStorming colaborativa (duración: 1.5 horas) para modelar el dominio del problema e identificar el comportamiento del sistema desde la ingesta de telemetría IoT hasta la resolución de intervenciones en planta.  
+
+**Actividades Realizadas en la Sesión:**
+**1. Unconstrained Brainstorming:** Identificación de eventos de negocio en tiempo pasado (p. ej., Sensor Reading Ingested, Anomaly Pattern Detected, Alert Generated, Work Order Created, Work Order Completed).
+**2. Timeline Enforcement:** Ordenamiento cronológico de los eventos en la línea de tiempo operativa.
+**3. Triggers, Commands & Aggregates:** Asociación de cada evento con los comandos desencadenantes (p. ej., Confirm Alert, Assign Work Order), agregados e involucrados.
+
+(FALTA IMAGEN)
 
 #### 2.5.1.1. Candidate Context Discovery
 
+A partir del mapa de EventStorming, se realizó la sesión de Candidate Context Discovery (duración: 1.5 horas) para descubrir los Bounded Contexts candidatos mediante las técnicas Look-for-pivotal-events (cambios de estado clave) y Start-with-value (aislamiento del core predictivo):
+**- Asset Telemetry & Analytics Context (Core):** Agrupa la ingesta de lecturas IoT, detección de anomalías por Machine Learning y cálculo de indicadores (RUL y OEE).
+**- Maintenance Operations Context (Supporting):** Administra el inventario de activos, ciclo de vida de alertas, órdenes de trabajo y gestión offline.
+**- Subscription & Billing Context (Generic):** Controla las cuentas corporativas, planes de suscripción y límites de activos.
+**- Identity & Access Management Context (Generic):** Gestiona usuarios, autenticación mediante JWT y autorización RBAC.
+
+(FALTA IMAGEN)
+
 #### 2.5.1.2. Domain Message Flows Modeling
 
+Para visualizar cómo colaboran los Bounded Contexts frente a escenarios reales del negocio, aplicamos la técnica de Domain Storytelling.  
+
+**Historia de Negocio: Detección y Atención de Falla Predictiva**
+**1.** El ***Sensor IoT*** transmite lecturas físicas al **Asset Telemetry & Analytics Context.**
+**2.** El ***Modelo Predictivo*** detecta un patrón anómalo y emite el evento *Anomaly Pattern Detected.*
+**3.** El **Maintenance Operations Context** consume el evento, genera una *Alert* y notifica al ***Jefe de Mantenimiento***.
+**4.** El ***Jefe de Mantenimiento*** confirma la alerta y emite el comando para crear la *Work Order*.
+**5.** El ***Técnico de Mantenimiento*** atiende la orden en la app móvil (soporte offline), carga la evidencia fotográfica y completa la intervención.
+
+(FALTA IMAGEN)
+
 #### 2.5.1.3. Bounded Context Canvases
+
+Siguiendo el proceso iterativo de diseño (Context Overview Definition, Business Rules Distillation, Capability Analysis y Dependencies Capture), elaboramos los canvases para todos los Bounded Contexts del sistema:  
+
+**1. Bounded Context Canvas: Asset Telemetry & Analytics**
+   **- Strategic Classification:** Core Domain.
+   **- Domain Roles:** Ingesta masiva de datos IoT en tiempo real, inferencia predictiva de fallas incipientes, estimación de Vida Útil Restante (RUL) y cálculo de la Eficiencia General de los Equipos (OEE).
+   **- Ubiquitous Language:** Sensor Reading, Threshold, Anomaly Pattern, RUL, OEE, Time-Series Data.
+   **- Inbound Events:** Sensor Reading Ingested.
+   **- Outbound Events:** Anomaly Pattern Detected, Threshold Exceeded.
+     
+**2. Bounded Context Canvas: Maintenance Operations**
+   **- Strategic Classification:** Supporting Domain.
+   **- Domain Roles:** Control del inventario de activos, generación y flujo de alertas, gestión y seguimiento de órdenes de trabajo, captura de evidencias y sincronización offline en la app móvil.
+   **- Ubiquitous Language:** Asset, Alert, Severity Level, Work Order, Unplanned Downtime, Offline Sync, Evidence Photo.
+   **- Inbound Events:** Anomaly Pattern Detected.
+   **- Outbound Events:** Alert Confirmed, Work Order Created, Work Order Assigned, Work Order Completed.
+
+**3. Bounded Context Canvas: Subscription & Billing**
+   **- Strategic Classification:** Generic Domain.
+   **- Domain Roles:** Registro de clientes corporativos, gestión de suscripciones (Planes Basic, Pro, Enterprise), facturación y control de límites operacionales por cuenta.
+   **- Ubiquitous Language:** Tenant/Company, Subscription Plan, Asset Limit, Billing Cycle, Invoice.
+   **- Inbound Events:** None.
+   **- Outbound Events:** Subscription Created, Subscription Limit Exceeded, Payment Processed.
+     
+**4. Bounded Context Canvas: Identity & Access Management**
+   **- Strategic Classification:** Generic Domain.
+   **- Domain Roles:** Autenticación de usuarios, emisión de tokens JWT, gestión de credenciales y autorización basada en roles (RBAC).
+   **- Ubiquitous Language:** User Account, Credentials, JWT Token, Role (Maintenance Manager, Technician), Permission.
+   **- Inbound Events:** None.
+   **- Outbound Events:** User Authenticated, User Registered.
+
+(FALTA IMAGENES)
 
 ### 2.5.2. Context Mapping
 

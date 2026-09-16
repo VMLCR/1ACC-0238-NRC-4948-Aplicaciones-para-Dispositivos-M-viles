@@ -562,6 +562,9 @@ En esta sección se presentan los artefactos resultantes del proceso de análisi
 
 ### 2.3.3. User Journey Mapping
 
+![User Journey Mapping 1](assets/cap2/journeyMapping/journeyMap1.png)
+![User Journey Mapping 2](assets/cap2/journeyMapping/journeyMap2.png)
+
 ### 2.3.4. Empathy Mapping
 
 ### 2.3.5. Big Picture EventStorming

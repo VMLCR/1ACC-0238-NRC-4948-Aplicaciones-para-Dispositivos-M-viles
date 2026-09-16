@@ -593,7 +593,7 @@ Para visualizar cómo colaboran los Bounded Contexts frente a escenarios reales 
 4. El ***Jefe de Mantenimiento*** confirma la alerta y emite el comando para crear la *Work Order*.
 5. El ***Técnico de Mantenimiento*** atiende la orden en la app móvil (soporte offline), carga la evidencia fotográfica y completa la intervención.
 
-(FALTA IMAGEN)
+![domain-story-telling](assets/cap2/domain-story-telling.png)
 
 #### 2.5.1.3. Bounded Context Canvases
 
@@ -631,11 +631,45 @@ Siguiendo el proceso iterativo de diseño (Context Overview Definition, Business
 
 ### 2.5.2. Context Mapping
 
+El equipo evaluó diversos escenarios candidatos mediante el planteamiento de preguntas clave sobre la distribución de responsabilidades y límites del sistema:
+
+**1. Aislamiento del Core Domain**
+
+- **Pregunta:** *«¿Qué pasaría si aislando el motor predictivo reducida la dependencia técnica con la gestión de órdenes de trabajo?»*
+- **Análisis:** Se identificó que la telemetría e IA procesan alto volumen de eventos en tiempo real, mientras que la gestión de órdenes es transaccional y orientada a procesos humanos.
+- **Decisión:** Separar Asset Telemetry & Analytics Context de Maintenance Operations Context, comunicándolos de forma asíncrona mediante un patrón Publisher / Subscriber y una ACL.
+
+**2. Evaluación de Servicios Compartidos (Shared Services)**
+
+- **Pregunta:** *«¿Qué pasaría si tomamos las capacidades de gestión de usuarios y autenticación de todos los contextos y formamos un Bounded Context independiente?»*
+- **Análisis:** Inicialmente se consideró que cada contexto gestione sus propios roles, pero esto generaba duplicación de lógica y brechas de seguridad.
+- **Decisión:** Crear un Identity & Access Management Context centralizado que actúe como Upstream (OHS/PL) para el resto del sistema.
+
+**3. Control de Límites Comerciales y Monetización**
+
+- **Pregunta:** *«¿Qué pasaría si duplicamos la lógica de verificación de planes e inscripciones dentro de Mantenimiento para romper la dependencia con Facturación?»*
+
+- **Análisis:** Duplicar las reglas de negocio de los planes de suscripción crearía inconsistencias cuando se modifiquen las tarifas o límites comerciales.
+
+- **Decisión:** Mantener la responsabilidad en Subscription & Billing Context y establecer una relación Customer / Supplier con Maintenance Operations Context.
+
+![context-mapping](assets/cap2/context-mapping.png)
+
+- ***Asset Telemetry & Analytics (U) => Maintenance Operations (D):*** Telemetría expone eventos como proveedor **Upstream (U)** usando un protocolo de publicación (Published Language). El contexto de Mantenimiento **(Downstream - D)** implementa una **ACL (Anticorruption Layer)** propia para desacoplar las estructuras de datos de la telemetría respecto al modelo interno de órdenes de trabajo.
+- ***Maintenance Operations (Customer) <=> Subscription & Billing (Supplier):*** Relación **Customer / Supplier (C/S)** donde Mantenimiento depende de las validaciones de planes comerciales antes de habilitar registros, y Facturación adapta sus SLA/contratos a los requerimientos operativos.
+- ***Identity & Access Management (U) => Todos (D):*** Actúa como subdominio genérico publicando una interfaz estándar **OHS / PL (Open Host Service / Published Language)** mediante tokens JWT/OAuth2 para todo el sistema.
+
 ### 2.5.3. Software Architecture
+
+Se presenta la representación de la arquitectura de software de **PredictiveMaintain** aplicando el estándar **C4 Model** a nivel de contexto y contenedores.
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
+![diagrama-de-contexto](assets/cap2/diagrama-de-contexto)
+
 #### 2.5.3.2. Software Architecture Container Level Diagrams
+
+![diagrama-de-contenedores](assets/cap2/diagrama-de-contenedores)
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 

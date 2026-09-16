@@ -477,24 +477,47 @@ De acuerdo con la Sociedad Nacional de Industrias (SNI) y análisis del sector m
 
 Para la validación de necesidades del proyecto, se diseñaron dos guías de entrevistas semiestructuradas orientadas a los dos segmentos objetivo del sistema:
 
-**Guía de Entrevista - Segmento 1: Operadores de Maquinaria y Planta**
-* **Propósito:** Comprender los desafíos diarios en la detección de fallas, la usabilidad de herramientas actuales y la seguridad durante la operación.
-* **Preguntas:**
-  1. ¿Cuáles son las máquinas o activos más críticos en su turno de trabajo y qué tipo de fallas suelen presentar?
-  2. ¿Cómo detecta actualmente que una máquina está empezando a fallar durante su turno? (¿ruido, temperatura, vibración?)
-  3. Cuando nota una irregularidad, ¿cuál es el procedimiento exacto para reportarla y cuánto tiempo toma?
-  4. ¿Qué dificultades encuentra al registrar información en bitácoras físicas o sistemas actuales durante su trabajo?
-  5. Si contara con una pantalla en planta o aplicación que le alerte con colores el estado del equipo antes de que falle, ¿cómo cambiaría su trabajo diario?
+---
 
-**Guía de Entrevista - Segmento 2: Área de Mantenimiento y Gestión Operativa**
-* **Propósito:** Analizar la toma de decisiones, la gestión de presupuesto por paradas no programadas, el uso de métricas (OEE) y la asignación de órdenes de trabajo.
-* **Preguntas:**
-  1. ¿Cómo organizan actualmente el plan de mantenimiento de la planta? (¿Reactivo, preventivo por calendario o predictivo?)
-  2. ¿Cuánto le cuesta a la planta una parada no programada de línea y cuáles son las causas más comunes?
-  3. ¿Cómo asignan y hacen seguimiento a las Órdenes de Trabajo (OT) para el equipo técnico?
-  4. ¿Qué métricas o indicadores (OEE, costos de repuestos, tiempo medio entre fallas) utiliza para evaluar la eficiencia del área?
-  5. ¿Qué limitantes encuentra en las herramientas actuales (Excel, CMMS tradicional) al intentar predecir una falla en activos críticos?
-  6. ¿Qué características indispensables debería tener un software de mantenimiento predictivo para ser adoptado en su empresa?
+**Segmento #1: Operador de Maquinaria y Planta (Usuario Operativo)**
+
+**Preguntas principales:**
+- ¿Cómo te va actualmente con la forma en que identificas y reportas las fallas mecánicas en los equipos de tu turno?
+- ¿Qué haces normalmente cuando notas que una máquina crítica empieza a sonar mal, vibrar o sobrecalentarse durante la producción?
+- ¿Qué tan fácil o difícil te resulta registrar una falla en las bitácoras o avisar al equipo de mantenimiento sin interrumpir tu trabajo diario?
+- Cuando has reportado una avería antes, ¿qué fue lo que más te preocupó (sufrir un accidente laboral, parar la línea de producción, que te culpen por la falla)?
+- ¿Qué cosas valoras más al momento de operar una máquina (seguridad en el puesto, claridad de los indicadores, rapidez de respuesta ante un fallo, herramientas fáciles de usar)?
+- ¿Con qué frecuencia recibes alertas tempranas sobre el estado real de la maquinaria antes de que se detenga por completo?
+- ¿Te ha pasado que una falla inesperada en la máquina haya detenido la producción por horas o generado un riesgo para tu seguridad? ¿Cómo lo resolvieron?
+- ¿Estarías dispuesto a utilizar una aplicación o pantalla con semáforos visuales (verde, amarillo, rojo) que te alerte el estado de la máquina en tiempo real? ¿Por qué?
+- ¿Qué funcionalidades crees que te facilitarían el trabajo diario (alertas sonoras/visuales, reporte rápido en 1 clic, historial simple de la máquina, estado del sensor en vivo)?
+
+**Preguntas complementarias:**
+- ¿Dónde o a través de qué medio reportas actualmente los problemas de la maquinaria (radio, WhatsApp, formato en papel, aviso verbal al supervisor)?
+- ¿Has utilizado previamente pantallas industriales o herramientas digitales para monitorear equipos? ¿Cómo fue tu experiencia?
+- ¿Qué tan cómodo te sientes usando una interfaz digital a pie de planta en comparación con los formatos físicos de papel?
+- ¿Qué tan dispuesto estarías a formar parte de un proceso donde los operadores tengan control directo y en tiempo real sobre la salud del equipo?
+
+---
+
+#### **Segmento #2: Área de Mantenimiento y Gestión Operativa (Jefe de Mantenimiento / Ingeniero de Planta)**
+
+**Preguntas principales:**
+- ¿Cómo está actualmente la planta con la forma en que gestionan las fallas e intervenciones de la maquinaria crítica?
+- ¿Qué haces normalmente cuando ocurre una parada de línea no programada por avería de un motor, bomba o compresor?
+- ¿Qué tan fácil o difícil te resulta predecir la vida útil restante de un componente clave antes de que ocurra una falla catastrófica?
+- Cuando coordinas un mantenimiento correctivo de emergencia, ¿qué es lo que más te preocupa (costo por hora de inactividad, disponibilidad de repuestos, seguridad del personal, perder cuotas de producción)?
+- ¿Qué cosas valoras más al evaluar el rendimiento del área de mantenimiento (disponibilidad de planta, reducción de costos, automatización de órdenes de trabajo, precisión del diagnóstico)?
+- ¿Con qué frecuencia realizan mantenimiento preventivo por calendario y cuántas piezas reemplazan que aún se encuentran en buen estado?
+- ¿Te ha pasado que un diagnóstico tardío haya provocado la destrucción total de un activo y cuantiosas pérdidas económicas? ¿Cómo lo resolvieron?
+- ¿Estarías dispuesto a pagar una suscripción SaaS por un software que conecte sensores IoT y prediga fallas con anticipación? ¿Por qué?
+- ¿Qué funcionalidades crees que te facilitarían la gestión desde una plataforma (dashboard centralizado de la planta, estimación RUL de activos, alertas automáticas por umbral, generación y asignación de Órdenes de Trabajo)?
+
+**Preguntas complementarias:**
+- ¿Dónde o con qué herramientas gestionas actualmente el plan de mantenimiento de la empresa (Excel, tarjetas Kanban físicas, software CMMS/ERP costoso)?
+- ¿Cuentan actualmente con sensores IoT instalados en sus activos o qué tan viable ven su integración a corto plazo?
+- ¿Cómo es el proceso actual desde que se detecta una anomalía hasta que el técnico recibe la Orden de Trabajo firmada?
+- ¿Qué tan dispuesto estarías a migrar de un esquema de mantenimiento preventivo rígido a una cultura de mantenimiento predictivo basada en analítica de datos?
 
 ---
 

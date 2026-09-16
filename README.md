@@ -665,11 +665,11 @@ Se presenta la representación de la arquitectura de software de **PredictiveMai
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-![diagrama-de-contexto](assets/cap2/diagrama-de-contexto)
+![diagrama-de-contexto](assets/cap2/diagrama-de-contexto.png)
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-![diagrama-de-contenedores](assets/cap2/diagrama-de-contenedores)
+![diagrama-de-contenedores](assets/cap2/diagrama-de-contenedores.png)
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 

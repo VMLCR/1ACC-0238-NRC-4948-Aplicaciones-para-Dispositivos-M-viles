@@ -500,7 +500,7 @@ Para la validación de necesidades del proyecto, se diseñaron dos guías de ent
 
 ---
 
-#### **Segmento #2: Área de Mantenimiento y Gestión Operativa (Jefe de Mantenimiento / Ingeniero de Planta)**
+**Segmento #2: Área de Mantenimiento y Gestión Operativa (Jefe de Mantenimiento / Ingeniero de Planta)**
 
 **Preguntas principales:**
 - ¿Cómo está actualmente la planta con la forma en que gestionan las fallas e intervenciones de la maquinaria crítica?

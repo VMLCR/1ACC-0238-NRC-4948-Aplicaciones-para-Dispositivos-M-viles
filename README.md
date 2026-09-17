@@ -572,6 +572,12 @@ En esta sección se presentan los artefactos resultantes del proceso de análisi
 
 ### 2.3.5. Big Picture EventStorming
 
+La primera ocurre en el origen de la intervención: el proceso puede iniciar de forma reactiva, cuando un operador detecta una anomalía por percepción sensorial (vibración, olor, calor), o de forma preventiva, cuando el calendario de mantenimiento alcanza la fecha programada para un activo. Ambos caminos convergen en el momento en que el Jefe de Mantenimiento evalúa la situación sin contar con datos objetivos del estado real del activo.
+
+La segunda bifurcación ocurre en el resultado de la intervención: al llegar al activo, el técnico puede encontrar el componente ya destruido (intervención tardía) o en buen estado (reemplazo prematuro por calendario rígido). En cualquiera de los dos casos, el activo vuelve a operación y el proceso cierra con un registro manual disperso entre papel, Excel y WhatsApp, dificultando el cálculo real de disponibilidad y OEE.
+
+![Big Picture EventStorming](assets/cap2/bigPictureEventStorming/bigPicture.jpg)
+
 ### 2.3.6. Ubiquitous Language
 
 | Término (Inglés) | Término (Español) | Definición |

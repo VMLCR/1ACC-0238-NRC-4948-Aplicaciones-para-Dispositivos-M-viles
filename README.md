@@ -567,6 +567,9 @@ En esta sección se presentan los artefactos resultantes del proceso de análisi
 
 ### 2.3.4. Empathy Mapping
 
+![Empathy Mapping 1](assets/cap2/empathyMapping/empathyMap1.png)
+![Empathy Mapping 2](assets/cap2/empathyMapping/empathyMap2.png)
+
 ### 2.3.5. Big Picture EventStorming
 
 ### 2.3.6. Ubiquitous Language

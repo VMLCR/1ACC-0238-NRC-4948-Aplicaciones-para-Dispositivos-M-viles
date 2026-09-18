@@ -796,7 +796,7 @@ El equipo organizó una sesión de EventStorming colaborativa (duración: 1.5 ho
 2. **Timeline Enforcement:** Ordenamiento cronológico de los eventos en la línea de tiempo operativa.
 3. **Triggers, Commands & Aggregates:** Asociación de cada evento con los comandos desencadenantes (p. ej., Confirm Alert, Assign Work Order), agregados e involucrados.
 
-(FALTA IMAGEN)
+![event-storming](assets/cap2/event-storming.png)
 
 #### 2.5.1.1. Candidate Context Discovery
 
@@ -806,7 +806,7 @@ A partir del mapa de EventStorming, se realizó la sesión de Candidate Context 
 - **Subscription & Billing Context (Generic):** Controla las cuentas corporativas, planes de suscripción y límites de activos.
 - **Identity & Access Management Context (Generic):** Gestiona usuarios, autenticación mediante JWT y autorización RBAC.
 
-(FALTA IMAGEN)
+![Candidate-Context-Discovery](assets/cap2/Candidate-Context-Discovery.jpg)
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
@@ -831,6 +831,8 @@ Siguiendo el proceso iterativo de diseño (Context Overview Definition, Business
    - **Ubiquitous Language:** Sensor Reading, Threshold, Anomaly Pattern, RUL, OEE, Time-Series Data.
    - **Inbound Events:** Sensor Reading Ingested.
    - **Outbound Events:** Anomaly Pattern Detected, Threshold Exceeded.
+
+![bounded-context-canva-1](assets/cap2/bounded-context-canva-1.jpg)
      
 **2. Bounded Context Canvas: Maintenance Operations**
    - **Strategic Classification:** Supporting Domain.
@@ -839,12 +841,16 @@ Siguiendo el proceso iterativo de diseño (Context Overview Definition, Business
    - **Inbound Events:** Anomaly Pattern Detected.
    - **Outbound Events:** Alert Confirmed, Work Order Created, Work Order Assigned, Work Order Completed.
 
+     ![bounded-context-canva-2](assets/cap2/bounded-context-canva-2.jpg)
+
 **3. Bounded Context Canvas: Subscription & Billing**
    - **Strategic Classification:** Generic Domain.
    - **Domain Roles:** Registro de clientes corporativos, gestión de suscripciones (Planes Basic, Pro, Enterprise), facturación y control de límites operacionales por cuenta.
    - **Ubiquitous Language:** Tenant/Company, Subscription Plan, Asset Limit, Billing Cycle, Invoice.
    - **Inbound Events:** None.
    - **Outbound Events:** Subscription Created, Subscription Limit Exceeded, Payment Processed.
+
+     ![bounded-context-canva-3](assets/cap2/bounded-context-canva-3.jpg)
      
 **4. Bounded Context Canvas: Identity & Access Management**
    - **Strategic Classification:** Generic Domain.
@@ -853,7 +859,7 @@ Siguiendo el proceso iterativo de diseño (Context Overview Definition, Business
    - **Inbound Events:** None.
    - **Outbound Events:** User Authenticated, User Registered.
 
-(FALTA IMAGENES)
+![bounded-context-canva-4](assets/cap2/bounded-context-canva-4.jpg)
 
 ### 2.5.2. Context Mapping
 

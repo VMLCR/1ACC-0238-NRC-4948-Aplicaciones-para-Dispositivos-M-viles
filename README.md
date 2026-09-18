@@ -36,12 +36,12 @@
 
 ### **Integrantes**
 
-| Código | Apellidos y Nombres |
-| :---: | :--- |
-| **u202317450** | Choy Robles, Vanessa May Lang |
-| **CODIGO** | NOMBRE CAMBIAR |
-| **CODIGO** | NOMBRE CAMBIAR |
-| **CODIGO** | NOMBRE CAMBIAR |
+|     Código     | Apellidos y Nombres            |
+|:--------------:|:-------------------------------|
+| **u202317450** | Choy Robles, Vanessa May Lang  |
+|   **CODIGO**   | NOMBRE CAMBIAR                 |
+|   **CODIGO**   | NOMBRE CAMBIAR                 |
+| **u201916755** | Aiquipa Poma, Sebastian Andres |
 
 <br>
 
@@ -207,6 +207,18 @@
 
 # Student Outcome
 
+El curso contribuye al cumplimiento del Student Outcome ABET:
+
+**ABET - EAC - Student Outcome 7**
+Criterio: La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas.
+
+En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 7.
+
+| Criterio Específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Conclusiones |
+|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Elaboró los artefactos de Needfinding (User Personas, User Task Matrix, User Journey Maps y Empathy Maps) en UXPressia, modeló el dominio mediante Big Picture EventStorming, y desarrolló la sección de Requirements Specification redactando User Stories, Technical Stories y Spike Stories con criterios de aceptación, Impact Mapping con Business Goals y Product Backlog.<br><br>**Apellido, Nombre 2**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:** | **AV1**<br><br>**TB1** |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Durante el desarrollo de Requirements Specification identificó la necesidad de investigar de forma autónoma conceptos como la estimación de Vida Útil Restante (RUL), la metodología de Big Picture EventStorming y las convenciones de Spike Stories, integrándolos al proyecto para producir artefactos más precisos y alineados con las necesidades reales del negocio identificadas en las entrevistas.<br><br>**Apellido, Nombre 2**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:**                                                                                                                                                                                                                                                                                                                                                                     | **AV1**<br><br>**TB1** |
+
 # Objetivos SMART
 
 # Capítulo I: Presentación
@@ -239,9 +251,13 @@ Visión: Convertirnos en el software de gestión predictiva industrial preferido
 - XXX
 
   <p align="center">
-    <img src="assets/integrantes/Garcia.jpg" alt="Garcia" width="170px"/>
+    <img src="assets/cap1/sebastian.png" alt="Sebastian" width="170px"/>
 </p>
-- XXXX
+
+- Sebastian Andres Aiquipa Poma - u201916755 (Ingenieria de Software)
+<p>
+Estudiante de Ingeniería de Software y desarrollador full-stack. Tengo experiencia construyendo plataformas web completas desde la arquitectura hasta el despliegue utilizando tecnologías como React, Node.js, Express y PostgreSQL. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.
+</p>
 
 <p align="center">
     <img src="assets/cap1/Valverde.png" alt="Valverde" width="170px"/>
@@ -567,6 +583,15 @@ Para la validación de necesidades del proyecto, se diseñaron dos guías de ent
 * **Resumen de respuestas:** El Ing. Ramírez señala que las paradas no programadas les cuestan un promedio de $3,500 por hora de inactividad. Manejan el mantenimiento preventivo con Excel y tarjetas físicas. Su mayor problema es que reemplazan piezas en buen estado por calendario, o intervienen tarde cuando el rodamiento ya destruyó el eje del motor. Requiere un sistema que le diga la **Vida Útil Restante (RUL)** estimada del activo y que genere automáticamente la Orden de Trabajo para enviar al técnico inmediatamente.
 * **Evidencia en video / audio:** [Enlace a grabación de entrevista 2]
 
+**Entrevista (Segmento 2: Área de Mantenimiento y Gestión Operativa)**
+* **Entrevistado:** Jorge Salazar (50 años)
+* **Cargo:** Supervisor de Mantenimiento
+* **Ubicación / Empresa:** Planta de manufactura mediana, rubro metalmecánico, San Juan de Lurigancho, Lima
+* **Duración:** 5 minutos
+* **Resumen de respuestas:** Jorge señala que el plan de mantenimiento de su planta es mayormente reactivo y preventivo por calendario, con frecuencias fijas de revisión que no reflejan el desgaste real de los activos. Estima que una parada de línea crítica puede costar entre S/. 3,000 y S/. 8,000 por hora, y que aproximadamente un tercio del presupuesto anual del área se destina a emergencias no planificadas. La asignación de órdenes de trabajo se gestiona verbalmente o por WhatsApp, con registro en Excel que frecuentemente queda desactualizado. Indica que el cálculo del OEE se realiza de forma manual y mensual, y que consolidar los datos para presentar a Gerencia puede tomar varias horas. Respecto a herramientas previas, señala que los CMMS evaluados resultaban costosos o rígidos para el tamaño de su operación, sin integración real con sensores IoT. Como requisitos indispensables para adoptar una solución, menciona: interfaz simple de usar desde el celular, alertas con anticipación antes de que falle la línea, generación automática de órdenes de trabajo, y un modelo de precios accesible para plantas medianas.
+* **Evidencia en video / audio:**[Enlace a grabacion entrevista 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQBz20sD2aUtQrsNGRWGmxHJAeQC4lye6AYGKppsCWPJrRg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yxNGsL)
+* <img src="assets/cap2/entrevistas/segmento2/entrevistaJorge.png" alt="Screenshot entrevista 3" width="300">
+
 ---
 
 ### 2.2.3. Análisis de entrevistas
@@ -726,6 +751,47 @@ En esta sección se presenta la especificación de los requisitos de PredictiveM
 | TS-11 | Cálculo del indicador de Vida Útil Restante (RUL) | Como Developer, quiero implementar el servicio que estima la Vida Útil Restante de un activo a partir de su historial de lecturas, para exponer dicho indicador a través del backend. | **Escenario 1: Estimación disponible**<br>Dado un activo con historial de lecturas suficiente<br>Cuando se envía `GET /api/assets/{id}/rul`<br>Entonces el sistema retorna `200 OK` con el valor estimado y el nivel de confianza del cálculo<br><br>**Escenario 2: Historial insuficiente**<br>Dado un activo sin historial suficiente<br>Cuando se envía `GET /api/assets/{id}/rul`<br>Entonces el sistema retorna `200 OK` con un indicador de "estimación no disponible" | EP-09 |
 | TS-12 | Cálculo del indicador OEE | Como Developer, quiero implementar el endpoint que calcula el indicador de Eficiencia General de los Equipos (OEE) de un activo o línea de producción, para soportar los reportes de analítica. | **Escenario 1: Cálculo exitoso**<br>Dado un rango de fechas válido y datos suficientes de disponibilidad, rendimiento y calidad<br>Cuando se envía `GET /api/reports/oee?assetId={id}&from={f}&to={t}`<br>Entonces el sistema retorna `200 OK` con el indicador OEE y sus tres componentes<br><br>**Escenario 2: Datos insuficientes**<br>Dado que falta información para calcular alguno de los tres componentes<br>Cuando se procesa la solicitud<br>Entonces el sistema retorna `200 OK` indicando qué componente no pudo calcularse | EP-05 |
 
+#### SP-01 — Investigar la Integración de un Broker MQTT para la Ingesta de Datos de Sensores IoT en la Plataforma PredictiveMaintain
+
+**Contexto:** La plataforma PredictiveMaintain requiere recibir de forma continua lecturas de sensores IoT (vibración, temperatura, presión, amperaje, ruido) instalados en maquinaria industrial. El equipo evalúa el uso de un protocolo de mensajería ligero (MQTT) para la comunicación entre los dispositivos IoT y el backend, dado que HTTP tradicional no es eficiente para flujos de datos de alta frecuencia y bajo consumo energético en dispositivos de planta.
+
+**Spike Story:** Como equipo de desarrollo (móvil, web y backend), quiero investigar y prototipar la integración de un broker MQTT (por ejemplo, HiveMQ o EMQX) con el backend de PredictiveMaintain, para entender las implicaciones técnicas, riesgos y esfuerzo requerido para soportar la ingesta de datos de sensores en tiempo real.
+
+**Criterios de Aceptación:**
+
+1. Dado que el equipo necesita evaluar opciones de brokers MQTT disponibles, cuando el desarrollador investiga las alternativas (HiveMQ, EMQX, Mosquitto), entonces el desarrollador documenta ventajas, limitaciones y modelo de costos de cada una en un informe compartido.
+2. Dado el backend implementado en el framework seleccionado por el equipo, cuando el desarrollador evalúa la compatibilidad de librerías cliente MQTT disponibles, entonces el desarrollador documenta los requisitos de integración (dependencias, configuración de suscripción a tópicos, manejo de reconexión).
+3. Dado la necesidad de simular el envío de datos desde un sensor IoT, cuando el desarrollador construye un cliente de prueba que publica lecturas simuladas a un tópico MQTT, entonces el backend recibe y almacena correctamente dichas lecturas.
+4. Dado los requisitos de seguridad de la plataforma, cuando el desarrollador evalúa los mecanismos de autenticación y cifrado soportados por el broker (TLS, usuario/contraseña, certificados), entonces documenta el enfoque recomendado para la solución.
+5. Dado que el Spike está completo, cuando el desarrollador compila los hallazgos, entonces el informe incluye una recomendación del broker a adoptar, estimación de esfuerzo de integración y posibles bloqueadores.
+
+**Definition of Done (DoD):**
+- El código del PoC (cliente MQTT simulado + endpoint de recepción) está registrado en una rama del repositorio.
+- El informe se comparte y revisa en una reunión de equipo o sesión de refinamiento del backlog.
+- Los hallazgos se utilizan para refinar TS-01 y crear historias adicionales de integración IoT.
+- El Spike está limitado a 8-16 horas y se completa dentro del sprint.
+
+---
+
+#### SP-02 — Investigar la Integración de una Librería de Detección de Anomalías no vista en clase, para el Diagnóstico Predictivo de Fallas en PredictiveMaintain
+
+**Contexto:** El equipo requiere incorporar, como componente esencial de aprendizaje autónomo del proyecto, una tecnología no cubierta en el curso que permita detectar patrones anómalos en las series de tiempo generadas por los sensores IoT (vibración, temperatura, presión, amperaje, ruido). Se evaluarán librerías/SDKs de detección de anomalías en series temporales (por ejemplo, un modelo de Isolation Forest, un SDK de Edge ML, o un servicio de anomaly detection en la nube) para determinar la opción más viable de integrar en el backend.
+
+**Spike Story:** Como equipo de desarrollo (backend y móvil), quiero investigar y prototipar la integración de una librería de detección de anomalías no vista en clase, para entender su viabilidad técnica, precisión y esfuerzo de integración dentro del flujo de generación de alertas de PredictiveMaintain.
+
+**Criterios de Aceptación:**
+
+1. Dado que el equipo necesita evaluar alternativas de detección de anomalías, cuando el desarrollador investiga las opciones disponibles, entonces documenta ventajas, limitaciones y requisitos de cada alternativa en un informe compartido.
+2. Dado el backend implementado por el equipo, cuando el desarrollador evalúa la compatibilidad de la librería seleccionada, entonces documenta los requisitos de integración (dependencias, formato de entrada de datos, tiempo de entrenamiento o inferencia).
+3. Dado un conjunto de datos simulados de lecturas de sensores, cuando el desarrollador ejecuta el modelo de detección de anomalías sobre dicho conjunto, entonces el modelo identifica correctamente al menos las anomalías inyectadas de forma controlada en la prueba.
+4. Dado que el modelo produce un resultado de anomalía, cuando el desarrollador integra dicho resultado con el servicio de generación de alertas (TS-02), entonces se genera una alerta de prueba de forma correcta.
+5. Dado que el Spike está completo, cuando el desarrollador compila los hallazgos, entonces el informe incluye una recomendación de adopción, estimación de esfuerzo y justificación de la elección como tecnología de aprendizaje autónomo.
+
+**Definition of Done (DoD):**
+- El código del PoC (modelo de detección + integración con TS-02) está registrado en una rama del repositorio.
+- El informe se comparte y revisa en una reunión de equipo o sesión de refinamiento del backlog.
+- Los hallazgos sustentan la sección de "aprendizaje autónomo" requerida en el informe final.
+- El Spike está limitado a 8-16 horas y se completa dentro del sprint.
 
 
 ### 2.4.2. Impact Mapping

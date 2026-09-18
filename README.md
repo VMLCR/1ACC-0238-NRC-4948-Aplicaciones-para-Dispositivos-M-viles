@@ -590,12 +590,61 @@ Video:<br>
 
 ### 2.2.3. Análisis de entrevistas
 
+### Análisis del Segmento 1: Operadores de Maquinaria y Planta (Usuarios operativos)
 
-El análisis cualitativo y estadístico derivado del estudio de campo con los representantes de ambos segmentos objetivo permite estructurar los fundamentos para el diseño de la solución digital y la construcción de los arquetipos de usuario.
+Este segmento ($N = 3$) está compuesto por Juan Carlos Quispe (28 años), Miguel Ángel Torres (35 años) y Luis Alberto Gómez (24 años). A continuación, se presenta la consolidación estadística de sus características demográficas, tecnológicas, puntos de dolor y requerimientos de solución.
 
-En lo correspondiente al Segmento 1: Operador de Maquinaria y Planta, los datos recolectados indican que el 100% de los operadores identifica actualmente los problemas mecánicos mediante percepción sensorial directa (ruidos, vibraciones excesivas o sobrecalentamiento al tacto). Un 100% manifiesta una alta frustración ante los métodos de reporte actuales (bitácoras físicas en papel o avisos verbales), señalando que interrumpen su trabajo diario y generan demoras operativas. Ante la ocurrencia de una avería, el 66.7% de los operadores expresa que su mayor preocupación es sufrir un accidente de trabajo por fallas inesperadas de la máquina, mientras que el 33.3% teme ser culpado por la gerencia ante la paralización de la línea de producción. En el ámbito tecnológico y de canales, el 100% de los operadores utiliza smartphones con sistema operativo Android (marcas Samsung, Xiaomi y Motorola) y utiliza aplicaciones móviles como WhatsApp y redes sociales como canal de comunicación habitual. Finalmente, existe un 100% de aceptación para la adopción de una pantalla o aplicación con semáforos visuales en tiempo real (verde, amarillo, rojo), donde el 100% considera indispensable la funcionalidad de reporte rápido en 1 clic y la emisión de alertas sonoras y visuales inmediatas.
+#### Cuadro 1: *Análisis estadístico de características del Segmento 1 (Operadores)*
 
-Por su parte, el análisis del Segmento 2: Área de Mantenimiento y Gestión Operativa evidencia que el 100% de las plantas representadas gestiona la maquinaria mediante una combinación de mantenimiento preventivo fijado por calendario y correctivo de emergencia. El 100% de los responsables confirma la imposibilidad práctica de predecir la vida útil restante (RUL) de componentes críticos bajo sus esquemas actuales, lo que ocasiona que el 66.7% reemplace de forma prematura piezas que aún se encuentran en buen estado. El impacto económico de las paradas no programadas es crítico: el 100% coincide en que el costo por hora de inactividad (que oscila entre S/. 3,000 y S/. 8,000) y el riesgo de incumplir las cuotas de producción representan sus mayores preocupaciones. En el aspecto tecnológico, el 100% de los jefes e ingenieros utiliza computadoras portátiles o de escritorio (Dell, Lenovo) con sistema operativo Windows, el navegador Google Chrome para la gestión y canales formales como correo corporativo junto a WhatsApp para coordinaciones de campo. Respecto a la viabilidad comercial y funcional, el 100% de los entrevistados afirma que estaría dispuesto a pagar una suscripción SaaS por un software conectado a sensores IoT predictivos, exigiendo como funcionalidades críticas un dashboard centralizado de planta, la estimación del RUL de los activos, la recepción de alertas automáticas por umbral y la automatización en la generación y asignación de órdenes de trabajo.
+| Criterio de Análisis | Variable / Categoría | Frecuencia ($n$) | Porcentaje (%) | Sustento en Entrevistas |
+| :--- | :--- | :---: | :---: | :--- |
+| **Rango de Edad** | 20 a 29 años | 2 | 66.7% | Juan Carlos (28) y Luis Alberto (24). |
+| | 30 a 39 años | 1 | 33.3% | Miguel Ángel (35). |
+| **Nivel Educativo** | Técnico / Capacitación Operativa | 3 | 100.0% | Los 3 entrevistados operan maquinaria específica de planta. |
+| **Método Actual de Detección de Fallas** | Sensorial (Oído, olor, vibración) | 3 | 100.0% | Ruido/olor (Juan Carlos), vibración (Miguel Ángel), temperatura (Luis Alberto). |
+| **Método Actual de Registro y Reporte** | Manual en papel / Hojas compartidas / Radio | 3 | 100.0% | Bitácora en papel (Juan Carlos), radio/supervisión (Miguel Ángel), Excel compartido (Luis Alberto). |
+| **Principal Punto de Dolor (Pain Point)** | Retrasos y lentitud en la atención técnica | 3 | 100.0% | Pérdida de tiempo al buscar al mecánico, esperar al supervisor o llenar tablas. |
+| | Temor a accidentes laborales / Fallas críticas | 3 | 100.0% | Temor a atrapamiento (Juan Carlos), ansiedad por cuota (Miguel Ángel), riesgo de explosión (Luis Alberto). |
+| **Perfil Tecnológico** | Smartphone Android (Samsung, Xiaomi, Motorola) | 3 | 100.0% | Uso diario de dispositivos móviles Android por parte de los 3 entrevistados. |
+| | Redes / Apps más utilizadas | 3 | 100.0% | WhatsApp (100%), TikTok/Facebook (66.7%), Telegram (33.3%). |
+| **Preferencia de Interfaz** | Visual mediante códigos de color (Semáforos) | 3 | 100.0% | Los 3 entrevistados solicitaron explícitamente indicadores en verde, amarillo y rojo. |
+| **Funcionalidades Deseadas** | Alertas sonoras o notificaciones potentes | 2 | 66.7% | Solicitado por Juan Carlos y Luis Alberto para entornos ruidosos. |
+| | Reporte de averías rápido (1-Clic / Botón directo) | 2 | 66.7% | Juan Carlos y Miguel Ángel requieren envío inmediato de reporte. |
+| | Estado de sensores / Telemetría en vivo | 2 | 66.7% | Monitoreo térmico (Juan Carlos) y estado operativo en vivo (Miguel Ángel). |
+
+#### Hallazgos Clave del Segmento 1:
+* **100%** de los operadores depende actualmente de métodos sensoriales empíricos y rudimentarios (escuchar ruidos, sentir vibraciones u oler sobrecalentamiento) para anticipar fallas.
+* **100%** sufre frustración por los métodos actuales de reporte (papel, radio o tablas en Excel), lo que genera demoras en la atención y pone en riesgo el cumplimiento de sus cuotas o su seguridad física.
+* **100%** de los usuarios operativos demanda una interfaz móvil intuitiva basada en **código de semáforos (verde/amarillo/rojo)** para una interpretación inmediata a pie de planta.
+
+---
+
+### Análisis del Segmento 2: Área de Mantenimiento y Gestión Operativa (Decisores)
+
+Este segmento ($N = 3$) está compuesto por Cristian Parado (32 años, Ingeniero de Planta), Jorge Salazar (50 años, Supervisor de Mantenimiento) y Carlos Mendoza (41 años, Jefe de Mantenimiento). A continuación, se detalla el análisis estadístico de sus respuestas.
+
+#### Cuadro 2: *Análisis estadístico de características del Segmento 2 (Decisores)*
+
+| Criterio de Análisis | Variable / Categoría | Frecuencia ($n$) | Porcentaje (%) | Sustento en Entrevistas |
+| :--- | :--- | :---: | :---: | :--- |
+| **Rango de Edad** | 30 a 39 años | 1 | 33.3% | Cristian Parado (32). |
+| | 40 a 50 años | 2 | 66.7% | Carlos Mendoza (41) y Jorge Salazar (50). |
+| **Nivel Educativo** | Universitario / Técnico Superior en Ingeniería | 3 | 100.0% | Todos poseen formación especializada en gestión industrial y mantenimiento. |
+| **Estrategia Actual de Mantenimiento** | Preventivo por calendario/horas + Correctivo | 3 | 100.0% | Mantenimiento rígido por fechas o kilometraje/horas de marcha que no evita fallas reactivas. |
+| **Impacto Económico de las Paradas** | Elevado costo por hora (S/. 3,000 a S/. 25,000+) | 3 | 100.0% | Pérdidas de S/. 3k-8k/hora (Jorge), fallas catastróficas > S/. 25k (Carlos), altos costos de inactividad (Cristian). |
+| **Canales de Comunicación Utilizados** | Informales (WhatsApp, llamadas, Excel, Email) | 3 | 100.0% | Excel/Nube (Cristian), WhatsApp/Llamadas (Jorge), Outlook/LinkedIn (Carlos). |
+| **Entorno Tecnológico** | Laptops / PCs / Tablets (Windows/Android) | 3 | 100.0% | Uso de Laptops Lenovo (Cristian), PCs de escritorio (Jorge) y Tablets Dell/Android (Carlos). |
+| **Disposición de Pago SaaS** | Disposición Total a pagar suscripción B2B con IoT | 3 | 100.0% | Los 3 decisores manifestaron apertura a pagar licencias SaaS si reducen los costos de parada. |
+| **Funcionalidades Imprescindibles** | Panel de Control / Dashboard Centralizado | 3 | 100.0% | Requerido por Cristian, Jorge y Carlos para tener visibilidad total de planta. |
+| | Alertas automáticas por rebasamiento de umbral | 3 | 100.0% | Notificaciones preventivas solicitadas explícitamente por los 3 entrevistados. |
+| | Generación y Asignación de Órdenes de Trabajo (OT) | 3 | 100.0% | Automatización del flujo hacia los técnicos solicitada por los 3 profesionales. |
+| | Estimación de Vida Útil Restante (RUL) / Analítica | 2 | 66.7% | Priorizado por Cristian Parado y Carlos Mendoza para la toma de decisiones estratégicas. |
+
+#### Hallazgos Clave del Segmento 2:
+* **100%** de las plantas representadas opera bajo un esquema tradicional (preventivo por calendario o reactivo), sufriendo pérdidas financieras significativas que oscilan entre S/. 3,000 por hora hasta paradas catastróficas superiores a S/. 25,000 por evento.
+* **100%** considera que los CMMS tradicionales son rígidos, costosos o complejos, mostrando una apertura total (**100% de receptividad**) hacia una solución SaaS B2B basada en sensores IoT.
+* **100%** de los decisores considera obligatorias tres funcionalidades clave: **Dashboard centralizado de telemetría**, **alertas automatizadas por umbrales** y **generación directa de Órdenes de Trabajo (OT)**.
+
 
 
 ## 2.3. Needfinding

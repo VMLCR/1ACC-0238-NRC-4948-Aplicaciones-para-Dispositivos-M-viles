@@ -39,7 +39,7 @@
 |     Código     | Apellidos y Nombres            |
 |:--------------:|:-------------------------------|
 | **u202317450** | Choy Robles, Vanessa May Lang  |
-|   **CODIGO**   | NOMBRE CAMBIAR                 |
+|   **u20231a816**   | Valverde Portuguez,Natalia Ximena                  |
 |   **CODIGO**   | NOMBRE CAMBIAR                 |
 | **u201916755** | Aiquipa Poma, Sebastian Andres |
 
@@ -67,7 +67,17 @@
 
 ## Evidencia de colaboración en GitHub
 
----
+Contributors
+
+<p align="center">
+    <img src="assets/cap1/Contributors.png" alt="Contributors" width="700px"/>
+</p>
+
+
+Network graph
+<p align="center">
+    <img src="assets/cap1/Network graph.png" alt="Network graph" width="700px"/>
+</p>
 
 # Contenido
 
@@ -216,8 +226,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio Específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Conclusiones |
 |---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Elaboró los artefactos de Needfinding (User Personas, User Task Matrix, User Journey Maps y Empathy Maps) en UXPressia, modeló el dominio mediante Big Picture EventStorming, y desarrolló la sección de Requirements Specification redactando User Stories, Technical Stories y Spike Stories con criterios de aceptación, Impact Mapping con Business Goals y Product Backlog.<br><br>**Apellido, Nombre 2**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:** | **AV1**<br><br>**TB1** |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Durante el desarrollo de Requirements Specification identificó la necesidad de investigar de forma autónoma conceptos como la estimación de Vida Útil Restante (RUL), la metodología de Big Picture EventStorming y las convenciones de Spike Stories, integrándolos al proyecto para producir artefactos más precisos y alineados con las necesidades reales del negocio identificadas en las entrevistas.<br><br>**Apellido, Nombre 2**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:**                                                                                                                                                                                                                                                                                                                                                                     | **AV1**<br><br>**TB1** |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Elaboró los artefactos de Needfinding (User Personas, User Task Matrix, User Journey Maps y Empathy Maps) en UXPressia, modeló el dominio mediante Big Picture EventStorming, y desarrolló la sección de Requirements Specification redactando User Stories, Technical Stories y Spike Stories con criterios de aceptación, Impact Mapping con Business Goals y Product Backlog.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:**<br>Elaboró el Capítulo I estructurando el perfil de la startup, la problemática industrial y el proceso Lean UX (Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas). Además, desarrolló el Capítulo II realizando el Análisis Competitivo y diseñó, ejecutó y analizó las guías de entrevistas semiestructuradas para los dos segmentos objetivo (Operadores de Planta y Jefes de Mantenimiento).<br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:** | **AV1**<br>El equipo demostró una sólida capacidad para actualizar e incorporar conceptos avanzados de desarrollo de software. Se logró transformar requerimientos complejos en un diseño arquitectónico modular, escalable y guiado por el dominio (DDD), garantizando que la solución técnica responda directamente a las necesidades operativas de la planta.<br> |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Durante el desarrollo de Requirements Specification identificó la necesidad de investigar de forma autónoma conceptos como la estimación de Vida Útil Restante (RUL), la metodología de Big Picture EventStorming y las convenciones de Spike Stories, integrándolos al proyecto para producir artefactos más precisos y alineados con las necesidades reales del negocio identificadas en las entrevistas.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:**<br> Investigó de forma autónoma metodologías de diseño de producto (Lean UX Canvas), análisis de la competencia en el sector industrial y técnicas de formulación de preguntas cualitativas. Esto permitió adaptar el lenguaje técnico del mantenimiento predictivo a las necesidades reales manifestadas por los usuarios durante las entrevistas. <br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:**                                                                                                                                                                                                                                                                                                                                                                     | **AV1**<br>La constante investigación e integración de metodologías modernas de arquitectura de software y tecnologías de la Industria 4.0 demostró la importancia del aprendizaje continuo. Esta actualización permanente permitió resolver problemas de diseño complejos, asegurando una arquitectura robusta, mantenible y alineada a los estándares profesionales de la industria de software. |
 
 # Objetivos SMART
 

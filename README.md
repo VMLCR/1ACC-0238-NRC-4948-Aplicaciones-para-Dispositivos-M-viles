@@ -570,7 +570,7 @@ El equipo organizó una sesión de EventStorming colaborativa (duración: 1.5 ho
 2. **Timeline Enforcement:** Ordenamiento cronológico de los eventos en la línea de tiempo operativa.
 3. **Triggers, Commands & Aggregates:** Asociación de cada evento con los comandos desencadenantes (p. ej., Confirm Alert, Assign Work Order), agregados e involucrados.
 
-![event-storming](assets/cap2/event-storming.jpg)
+![event-storming](assets/cap2/event-storming.png)
 
 #### 2.5.1.1. Candidate Context Discovery
 

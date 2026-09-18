@@ -622,6 +622,21 @@ Por su parte, el análisis del Segmento 2: Área de Mantenimiento y Gestión Ope
 En esta sección se presentan los artefactos resultantes del proceso de análisis de la información recolectada en las entrevistas a los segmentos objetivo de PredictiveMaintain. A partir de los hallazgos obtenidos, el equipo construye los User Personas, el User Task Matrix, los User Journey Maps, los Empathy Maps, el Big Picture EventStorming y el Ubiquitous Language del dominio, buscando comprender en profundidad las necesidades, tareas y comportamientos de los Jefes de Mantenimiento/Gerentes de Planta y los Técnicos de Mantenimiento como actores principales del negocio.
 
 ### 2.3.1. User Personas
+
+Con base en los segmentos objetivo definidos en la sección 1.3 y en los
+hallazgos del análisis de entrevistas, se elaboró las
+fichas de User Persona correspondientes a cada segmento. Las
+características objetivas y subjetivas identificadas en las entrevistas
+incluyendo comportamientos, frustraciones, objetivos, canales de interacción
+y afinidad tecnológica; constituyeron la fuente principal para la
+construcción de cada arquetipo.
+
+Se elaboró una ficha por cada segmento objetivo:
+- **Renzo Huamán** representa al Área de Mantenimiento y Gestión
+  Operativa (Jefe de Mantenimiento).
+- **Jhonatan Torres** representa a los Operadores de Maquinaria y
+  Planta (Técnico de Mantenimiento).
+
 ![User Persona - JefeDeMantenimiento](assets/cap2/userPersonas/renzoHuaman.png)
 ![User Persona - Tecnico](assets/cap2/userPersonas/jhonatanTorres.png)
 ### 2.3.2. User Task Matrix
@@ -653,6 +668,10 @@ En esta sección se presentan los artefactos resultantes del proceso de análisi
 ![Empathy Mapping 2](assets/cap2/empathyMapping/empathyMap2.png)
 
 ### 2.3.5. Big Picture EventStorming
+
+El equipo realizó una sesión de Big Picture EventStorming para modelar el dominio de mantenimiento industrial a nivel general, identificando
+los eventos de negocio significativos, actores, sistemas externos y problemas
+clave del proceso actual. Se identifico las fases de Domain Events, su ordenamiento cronológico, incorporación de Actors y External Systems para validar la coherencia del flujo construido.
 
 La primera ocurre en el origen de la intervención: el proceso puede iniciar de forma reactiva, cuando un operador detecta una anomalía por percepción sensorial (vibración, olor, calor), o de forma preventiva, cuando el calendario de mantenimiento alcanza la fecha programada para un activo. Ambos caminos convergen en el momento en que el Jefe de Mantenimiento evalúa la situación sin contar con datos objetivos del estado real del activo.
 
@@ -1841,6 +1860,38 @@ Las relaciones del modelo son: UserAccount (1) → UserRole (1..*), contiene; Ro
 
 # Conclusiones y recomendaciones
 
+Durante el desarrollo del AV1, el equipo validó que el problema central del
+sector industrial peruano es la incapacidad de anticipar fallas en maquinaria
+crítica mediante herramientas accesibles. Esto nos presenta una oportunidad real
+de negocio no resuelta por los competidores actuales, quienes o bien ofrecen
+soluciones de alto costo orientadas a grandes corporaciones (Fiix, Augury),
+o carecen de capacidades predictivas reales basadas en datos de sensores
+(Fracttal One).
+
+Las entrevistas realizadas con representantes de ambos segmentos objetivo
+confirmaron los principales supuestos planteados en el proceso
+Lean UX: los operadores dependen en más del 80% de sus sentidos para detectar
+fallas, el flujo de reporte y asignación de órdenes consume entre 30 y 60
+minutos de tiempo no productivo, y los gestores de mantenimiento carecen de
+un indicador objetivo como el RUL para planificar intervenciones con
+anticipación. 
+
+Estos hallazgos sustentan directamente la priorización de los
+Epics EP-01 (Monitoreo en tiempo real), EP-02 (Alertas predictivas y RUL) y
+EP-03 (Gestión de órdenes de trabajo) en el Product Backlog.
+
+El diseño en Domain-Driven Design permitió
+identificar cuatro Bounded Contexts con responsabilidades claramente
+delimitadas, Asset Telemetry & Analytics, Maintenance Operations,
+Subscription & Billing e Identity & Access Management. Su separación
+reduce el acoplamiento entre el motor predictivo y los procesos operativos
+de planta, facilitando la evolución independiente de cada componente.
+
+Como recomendaciones para las siguientes entregas, el equipo deberá
+priorizar la implementación del flujo core de detección de anomalías y
+generación de alertas (Spike SP-02), validar la viabilidad técnica del
+protocolo MQTT para ingesta de datos simulados (Spike SP-01).
+
 # Video App Validation
 
 # Video About the product
@@ -1851,4 +1902,66 @@ Las relaciones del modelo son: UserAccount (1) → UserRole (1..*), contiene; Ro
 
 # Bibliografía
 
+Instituto Nacional de Estadística e Informática. (2023). *Producción y
+empleo informal en el Perú: Cuenta satélite de la economía informal
+2007-2022*. INEI. https://www.inei.gob.pe
+
+Sociedad Nacional de Industrias. (2023). *Reporte de manufactura 2023*.
+SNI. https://www.sni.org.pe
+
+Organismo Supervisor de la Inversión en Energía y Minería. (2022).
+*Estadísticas de accidentes en el sector industrial y minero*.
+OSINERGMIN. https://www.osinergmin.gob.pe
+
+McKinsey & Company. (2022). *Unlocking the industrial potential of
+robotics and automation*. McKinsey Global Institute.
+https://www.mckinsey.com/capabilities/operations/our-insights/unlocking-the-industrial-potential-of-robotics-and-automation
+
+ISO. (2017). *ISO 13381-1:2015 — Condition monitoring and diagnostics
+of machines: Prognostics. Part 1: General guidelines*.
+International Organization for Standardization.
+https://www.iso.org/standard/51436.html
+
+IBM. (2023). *What is predictive maintenance?*
+https://www.ibm.com/topics/predictive-maintenance
+
+IBM. (2023). *What is Overall Equipment Effectiveness (OEE)?*
+https://www.ibm.com/topics/overall-equipment-effectiveness
+
+AWS. (2024). *What is remaining useful life (RUL) prediction?*
+Amazon Web Services.
+https://aws.amazon.com/what-is/remaining-useful-life/
+
+Gothelf, J. (2021). *Lean UX: Designing great products with agile teams*
+(3rd ed.). O'Reilly Media.
+https://www.oreilly.com/library/view/lean-ux-3rd/9781098116293/
+
+Fowler, M. (2014). *Ubiquitous language*.
+https://martinfowler.com/bliki/UbiquitousLanguage.html
+
+Brandolini, A. (2022). *Introducing EventStorming*.
+https://www.eventstorming.com
+
+Tune, N. (2019). *Domain-driven architecture diagrams*.
+https://medium.com/nick-tune-tech-strategy-blog/domain-driven-architecture-diagrams-139a75acb578
+
+HiveMQ. (2024). *MQTT essentials: A lightweight messaging protocol
+for the IoT*. https://www.hivemq.com/mqtt-essentials/
+
+UXPressia. (2024). *User persona, customer journey map and impact
+map tools*. https://uxpressia.com
+
+Structurizr. (2024). *C4 model for visualising software architecture*.
+https://structurizr.com
+
+NestJS. (2024). *NestJS documentation*.
+https://docs.nestjs.com
+
+Flutter. (2024). *Flutter documentation*.
+https://docs.flutter.dev
+
 # Anexos
+
+## Reporte de Participación
+El Participant Performance Report de la entrega AV1:
+upc-pre-202620-1acc0238-4948-PredictiveTech-performance-av1.pdf

@@ -1,0 +1,62 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classBackgroundColor #EEF4FB
+skinparam classBorderColor #24527A
+hide empty members
+
+title Identity & Access Management - Domain Layer (propuesta)
+
+class UserAccount <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -email: varchar(254)
+  {field} -display_name: varchar(120)
+  {field} -password_hash: text
+  {field} -active: boolean
+  {field} -created_at: timestamptz
+  +deactivate(): void
+  +changePassword(hash: string): void
+  +assignRole(role: Role): void
+  +removeRole(role: Role): void
+}
+class Role <<Entity>> {
+  {field} -id: uuid
+  {field} -name: varchar(40)
+  +allows(action: string): boolean
+}
+class UserRole <<Entity>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -user_id: uuid
+  {field} -role_id: uuid
+  +create(userId: UUID, roleId: UUID): UserRole
+}
+class EmailAddress <<Value Object>> {
+  {field} -value: string
+  +normalize(value): EmailAddress
+}
+UserAccount "1" *--> "1..*" UserRole : contiene
+Role "1" --> "0..*" UserRole : clasifica
+UserAccount ..> EmailAddress : utiliza
+interface IIamRepository {
+  +findById(tenantId: UUID, id: UUID): Aggregate
+  +save(aggregate: Aggregate): void
+}
+IIamRepository ..> UserAccount : recupera / persiste
+class PasswordResetRequest <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -user_id: uuid
+  {field} -token_hash: text
+  {field} -expires_at: timestamptz
+  {field} -used_at: timestamptz [0..1]
+  +isValid(at: DateTime): boolean
+  +consume(at: DateTime): void
+}
+UserAccount "1" --> "0..*" PasswordResetRequest : solicita
+@enduml

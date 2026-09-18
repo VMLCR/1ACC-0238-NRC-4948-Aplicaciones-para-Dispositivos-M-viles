@@ -1,0 +1,95 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classBackgroundColor #EEF4FB
+skinparam classBorderColor #24527A
+hide empty members
+
+title Maintenance Operations - Database Design (PostgreSQL)
+
+entity "assets" as Asset {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * code: varchar(50)
+  {field} * name: varchar(120)
+  {field} * location: varchar(120)
+  {field} * active: boolean
+  {field} * capacity_reservation_id: uuid
+  {field} * plant_id: uuid <<FK>>
+  {field} * production_line: varchar(100)
+  {field} * asset_type: varchar(80)
+  {field} * criticality: varchar(20)
+  {field}  latitude: numeric
+  {field}  longitude: numeric
+}
+entity "alerts" as Alert {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * asset_id: uuid <<FK>>
+  {field} * source_event_id: uuid
+  {field} * severity: varchar(20)
+  {field} * status: varchar(20)
+  {field} * created_at: timestamptz
+  {field} * version: integer
+  {field}  discard_reason: text
+  {field} * updated_at: timestamptz
+}
+entity "work_orders" as WorkOrder {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * alert_id: uuid <<FK>>
+  {field}  assigned_user_id: uuid
+  {field} * status: varchar(20)
+  {field}  summary: text
+  {field} * created_at: timestamptz
+  {field}  completed_at: timestamptz
+  {field} * version: integer
+  {field} * updated_at: timestamptz
+}
+entity "evidence_photos" as EvidencePhoto {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * work_order_id: uuid <<FK>>
+  {field} * storage_key: varchar(255)
+  {field} * mime_type: varchar(80)
+  {field} * uploaded_at: timestamptz
+}
+Asset ||--o{ Alert : recibe
+Alert ||--o| WorkOrder : origina
+WorkOrder ||--o{ EvidencePhoto : contiene
+entity "processed_events" as Inbox {
+ {field} * tenant_id: uuid <<PK>>
+ {field} * event_id: uuid <<PK>>
+ {field} * processed_at: timestamptz
+}
+entity "sync_operations" as Sync {
+ {field} * tenant_id: uuid <<PK>>
+ {field} * actor_id: uuid <<PK>>
+ {field} * operation_id: uuid <<PK>>
+ {field} * resource_id: uuid
+ {field} * request_hash: text
+ {field} * result: jsonb
+ {field} * processed_at: timestamptz
+}
+legend bottom
+* NOT NULL. PK: primary key.
+Las FKs compuestas, unicidad y CHECK se detallan en el informe.
+Los identificadores de otros contextos no son FKs entre bases.
+endlegend
+entity "work_order_changes" as WorkOrderChange {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * work_order_id: uuid <<FK>>
+  {field} * actor_id: uuid
+  {field} * previous_status: varchar(20)
+  {field} * new_status: varchar(20)
+  {field}  previous_assignee_id: uuid
+  {field}  new_assignee_id: uuid
+  {field} * changed_at: timestamptz
+}
+WorkOrder ||--o{ WorkOrderChange : registra
+@enduml

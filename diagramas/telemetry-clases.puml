@@ -1,0 +1,84 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classBackgroundColor #EEF4FB
+skinparam classBorderColor #24527A
+hide empty members
+
+title Asset Telemetry & Analytics - Domain Layer (propuesta)
+
+class Sensor <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -asset_id: uuid
+  {field} -metric: varchar(40)
+  {field} -unit: varchar(20)
+  {field} -active: boolean
+  {field} -last_received_at: timestamptz [0..1]
+  +deactivate(): void
+  +accepts(unit: string): boolean
+}
+class SensorReading <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -sensor_id: uuid
+  {field} -source_key: varchar(100)
+  {field} -value: numeric
+  {field} -unit: varchar(20)
+  {field} -measured_at: timestamptz
+  {field} -received_at: timestamptz
+  +create(sensor: Sensor, measurement: Measurement): SensorReading
+}
+class ThresholdRule <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -sensor_id: uuid
+  {field} -lower_bound: numeric
+  {field} -upper_bound: numeric
+  {field} -severity: varchar(20)
+  {field} -version: integer
+  +evaluate(value: decimal): boolean
+  +changeBounds(lower: decimal, upper: decimal): void
+}
+class AnomalyDetection <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -reading_id: uuid
+  {field} -rule_id: uuid
+  {field} -rule_version: integer
+  {field} -lower_snapshot: numeric
+  {field} -upper_snapshot: numeric
+  {field} -severity: varchar(20)
+  {field} -detected_at: timestamptz
+  +fromThreshold(reading: SensorReading, rule: ThresholdRule): AnomalyDetection
+}
+class RulEstimate <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -asset_id: uuid
+  {field} -hours_remaining: numeric
+  {field} -model_version: varchar(80)
+  {field} -estimated_at: timestamptz
+  {field} -confidence: numeric
+  +create(hours: decimal, modelVersion: string): RulEstimate
+}
+class Measurement <<Value Object>> {
+  {field} -value: decimal
+  {field} -unit: string
+  +of(value, unit): Measurement
+}
+Sensor "1" --> "0..*" SensorReading : origina
+Sensor "1" --> "0..1" ThresholdRule : configura
+SensorReading "1" --> "0..1" AnomalyDetection : produce
+ThresholdRule "1" --> "0..*" AnomalyDetection : fundamenta
+SensorReading ..> Measurement : utiliza
+interface ITelemetryRepository {
+  +findById(tenantId: UUID, id: UUID): Aggregate
+  +save(aggregate: Aggregate): void
+}
+ITelemetryRepository ..> Sensor : recupera / persiste
+@enduml

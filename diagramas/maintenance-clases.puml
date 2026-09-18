@@ -1,0 +1,100 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classBackgroundColor #EEF4FB
+skinparam classBorderColor #24527A
+hide empty members
+
+title Maintenance Operations - Domain Layer (propuesta)
+
+class Asset <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -code: varchar(50)
+  {field} -name: varchar(120)
+  {field} -location: varchar(120)
+  {field} -active: boolean
+  {field} -capacity_reservation_id: uuid
+  {field} -plant_id: uuid
+  {field} -production_line: varchar(100)
+  {field} -asset_type: varchar(80)
+  {field} -criticality: varchar(20)
+  {field} -latitude: numeric [0..1]
+  {field} -longitude: numeric [0..1]
+  +register(code: string, name: string): Asset
+  +deactivate(): void
+}
+class Alert <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -asset_id: uuid
+  {field} -source_event_id: uuid
+  {field} -severity: varchar(20)
+  {field} -status: varchar(20)
+  {field} -created_at: timestamptz
+  {field} -version: integer
+  {field} -discard_reason: text [0..1]
+  {field} -updated_at: timestamptz
+  +confirm(): void
+  +resolve(): void
+  +discard(reason: string): void
+}
+class WorkOrder <<Aggregate Root>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -alert_id: uuid
+  {field} -assigned_user_id: uuid [0..1]
+  {field} -status: varchar(20)
+  {field} -summary: text [0..1]
+  {field} -created_at: timestamptz
+  {field} -completed_at: timestamptz [0..1]
+  {field} -version: integer
+  {field} -updated_at: timestamptz
+  +assign(technicianId: UUID): void
+  +start(): void
+  +complete(summary: string): void
+  +cancel(): void
+}
+class EvidencePhoto <<Entity>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -work_order_id: uuid
+  {field} -storage_key: varchar(255)
+  {field} -mime_type: varchar(80)
+  {field} -uploaded_at: timestamptz
+  +create(storageKey: string, mimeType: string): EvidencePhoto
+}
+enum WorkOrderStatus {
+  OPEN
+  ASSIGNED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+Asset "1" --> "0..*" Alert : recibe
+Alert "1" --> "0..1" WorkOrder : origina
+WorkOrder "1" *--> "0..*" EvidencePhoto : contiene
+WorkOrder ..> WorkOrderStatus : utiliza
+interface IMaintenanceRepository {
+  +findById(tenantId: UUID, id: UUID): Aggregate
+  +save(aggregate: Aggregate): void
+}
+IMaintenanceRepository ..> Asset : recupera / persiste
+class WorkOrderChange <<Entity>> {
+  {field} -id: uuid
+  {field} -tenant_id: uuid
+  {field} -work_order_id: uuid
+  {field} -actor_id: uuid
+  {field} -previous_status: varchar(20)
+  {field} -new_status: varchar(20)
+  {field} -previous_assignee_id: uuid [0..1]
+  {field} -new_assignee_id: uuid [0..1]
+  {field} -changed_at: timestamptz
+  +record(actorId: UUID, changedAt: DateTime): WorkOrderChange
+}
+WorkOrder "1" *--> "0..*" WorkOrderChange : registra
+@enduml

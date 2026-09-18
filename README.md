@@ -1905,10 +1905,6 @@ protocolo MQTT para ingesta de datos simulados (Spike SP-01).
 
 # Bibliografía
 
-# Bibliografía
-
-# Bibliografía
-
 Instituto Nacional de Estadística e Informática. (2023). *Producción y
 empleo informal en el Perú: Cuenta satélite de la economía informal
 2007-2022*. INEI. https://www.inei.gob.pe

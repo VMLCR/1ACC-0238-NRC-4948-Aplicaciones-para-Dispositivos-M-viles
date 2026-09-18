@@ -217,7 +217,7 @@ Visión: Convertirnos en el software de gestión predictiva industrial preferido
 - XXXX
 
 <p align="center">
-    <img src="assets/integrantes/Valverde.png" alt="Valverde" width="170px"/>
+    <img src="assets/cap1/Valverde.png" alt="Valverde" width="170px"/>
 </p>
 
 - Valverde Portuguez, Natalia Ximena - u20231a816 (Ingeniería de Software)

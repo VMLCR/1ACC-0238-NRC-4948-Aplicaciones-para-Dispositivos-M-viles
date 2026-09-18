@@ -907,7 +907,7 @@ El Product Backlog consolida las User Stories, Technical Stories y Spike Stories
 
 ![Product Backlog](assets/cap2/productBacklog/productBacklog1.png)
 
-**Link:** [Product Backlog — PredictiveMaintain](https://trello.com/invite/b/6aadc4483d2842e7b775c223/ATTI70216e52023a7c3de8fed1ec18f6956cE6A813DF/product-backlog-predictivetech)
+**Link:** [Product Backlog — PredictiveMaintain](https://trello.com/b/BsUOrdam)
 
 ## 2.5. Strategic-Level Domain-Driven Design
 

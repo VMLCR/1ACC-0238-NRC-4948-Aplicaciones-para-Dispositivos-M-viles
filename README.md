@@ -40,7 +40,7 @@
 |:--------------:|:-------------------------------|
 | **u202317450** | Choy Robles, Vanessa May Lang  |
 |   **u20231a816**   | Valverde Portuguez,Natalia Ximena                  |
-|   **CODIGO**   | NOMBRE CAMBIAR                 |
+|   **U202412951**   | Seminario Castillo,Diego Vicente                 |
 | **u201916755** | Aiquipa Poma, Sebastian Andres |
 
 <br>
@@ -226,8 +226,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio Específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Conclusiones |
 |---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Elaboró los artefactos de Needfinding (User Personas, User Task Matrix, User Journey Maps y Empathy Maps) en UXPressia, modeló el dominio mediante Big Picture EventStorming, y desarrolló la sección de Requirements Specification redactando User Stories, Technical Stories y Spike Stories con criterios de aceptación, Impact Mapping con Business Goals y Product Backlog.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:**<br>Elaboró el Capítulo I estructurando el perfil de la startup, la problemática industrial y el proceso Lean UX (Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas). Además, desarrolló el Capítulo II realizando el Análisis Competitivo y diseñó, ejecutó y analizó las guías de entrevistas semiestructuradas para los dos segmentos objetivo (Operadores de Planta y Jefes de Mantenimiento).<br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:** | **AV1**<br>El equipo demostró una sólida capacidad para actualizar e incorporar conceptos avanzados de desarrollo de software. Se logró transformar requerimientos complejos en un diseño arquitectónico modular, escalable y guiado por el dominio (DDD), garantizando que la solución técnica responda directamente a las necesidades operativas de la planta.<br> |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Durante el desarrollo de Requirements Specification identificó la necesidad de investigar de forma autónoma conceptos como la estimación de Vida Útil Restante (RUL), la metodología de Big Picture EventStorming y las convenciones de Spike Stories, integrándolos al proyecto para producir artefactos más precisos y alineados con las necesidades reales del negocio identificadas en las entrevistas.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:**<br> Investigó de forma autónoma metodologías de diseño de producto (Lean UX Canvas), análisis de la competencia en el sector industrial y técnicas de formulación de preguntas cualitativas. Esto permitió adaptar el lenguaje técnico del mantenimiento predictivo a las necesidades reales manifestadas por los usuarios durante las entrevistas. <br><br>**Apellido, Nombre 3**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 4**<br>**AV1:**<br>**TB1:**<br><br>**Apellido, Nombre 5**<br>**AV1:**<br>**TB1:**                                                                                                                                                                                                                                                                                                                                                                     | **AV1**<br>La constante investigación e integración de metodologías modernas de arquitectura de software y tecnologías de la Industria 4.0 demostró la importancia del aprendizaje continuo. Esta actualización permanente permitió resolver problemas de diseño complejos, asegurando una arquitectura robusta, mantenible y alineada a los estándares profesionales de la industria de software. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Elaboró los artefactos de Needfinding (User Personas, User Task Matrix, User Journey Maps y Empathy Maps) en UXPressia, modeló el dominio mediante Big Picture EventStorming, y desarrolló la sección de Requirements Specification redactando User Stories, Technical Stories y Spike Stories con criterios de aceptación, Impact Mapping con Business Goals y Product Backlog.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:**<br>Elaboró el Capítulo I estructurando el perfil de la startup, la problemática industrial y el proceso Lean UX (Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas). Además, desarrolló el Capítulo II realizando el Análisis Competitivo y diseñó, ejecutó y analizó las guías de entrevistas semiestructuradas para los dos segmentos objetivo (Operadores de Planta y Jefes de Mantenimiento).<br><br>**Seminario Castillo,Diego Vicente**<br>**AV1:**<br>**TB1:**<br><br>**Valverde Portuguez,Natalia Ximena**<br>**AV1:**<br>**TB1:** | **AV1**<br>El equipo demostró una sólida capacidad para actualizar e incorporar conceptos avanzados de desarrollo de software. Se logró transformar requerimientos complejos en un diseño arquitectónico modular, escalable y guiado por el dominio (DDD), garantizando que la solución técnica responda directamente a las necesidades operativas de la planta.<br> |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Aiquipa Poma, Sebastian Andres**<br>**AV1:** Durante el desarrollo de Requirements Specification identificó la necesidad de investigar de forma autónoma conceptos como la estimación de Vida Útil Restante (RUL), la metodología de Big Picture EventStorming y las convenciones de Spike Stories, integrándolos al proyecto para producir artefactos más precisos y alineados con las necesidades reales del negocio identificadas en las entrevistas.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:**<br> Investigó de forma autónoma metodologías de diseño de producto (Lean UX Canvas), análisis de la competencia en el sector industrial y técnicas de formulación de preguntas cualitativas. Esto permitió adaptar el lenguaje técnico del mantenimiento predictivo a las necesidades reales manifestadas por los usuarios durante las entrevistas. <br><br>**Seminario Castillo,Diego Vicente**<br>**AV1:**<br>**TB1:**<br><br>**Valverde Portuguez,Natalia Ximena**<br>**AV1:**<br>**TB1:**| **AV1**<br>La constante investigación e integración de metodologías modernas de arquitectura de software y tecnologías de la Industria 4.0 demostró la importancia del aprendizaje continuo. Esta actualización permanente permitió resolver problemas de diseño complejos, asegurando una arquitectura robusta, mantenible y alineada a los estándares profesionales de la industria de software. |
 
 # Objetivos SMART
 
@@ -247,37 +247,12 @@ Visión: Convertirnos en el software de gestión predictiva industrial preferido
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-<p align="center">
-    <img src="assets/cap1/choy.jpeg" alt="Choy" width="170px"/>
-
-- Choy Robles, Vanessa May Lang - u202317450 (Ingeniería de Software)
-<p>Soy estudiante de Ingeniería de Software con experiencia en distintos lenguajes de programación, diseño UX/UI y trabajo bajo metodologías ágiles como Scrum. Aporto al equipo una visión orientada tanto a la funcionalidad como a la experiencia del usuario, contribuyendo en el desarrollo y mejora continua del producto. Me caracterizo por mi responsabilidad, cumplimiento de plazos y participación activa en el trabajo colaborativo. 
-</p>
-
-
-<p align="center">
-    <img src="assets/integrantes/Espino.jpg" alt="Espino" width="170px"/>
-</p>
-- XXX
-
-  <p align="center">
-    <img src="assets/cap1/sebastian.png" alt="Sebastian" width="170px"/>
-</p>
-
-- Sebastian Andres Aiquipa Poma - u201916755 (Ingenieria de Software)
-<p>
-Estudiante de Ingeniería de Software y desarrollador full-stack. Tengo experiencia construyendo plataformas web completas desde la arquitectura hasta el despliegue utilizando tecnologías como React, Node.js, Express y PostgreSQL. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.
-</p>
-
-<p align="center">
-    <img src="assets/cap1/Valverde.png" alt="Valverde" width="170px"/>
-</p>
-
-- Valverde Portuguez, Natalia Ximena - u20231a816 (Ingeniería de Software)
-<p>
-Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con conocimientos de Marketing y estoy interesada en el UX Design y data analysis. Experiencia en trabajos de creación de startups en el ámbito laboral, lo que fortalece mis capacidades tanto en trabajos grupales e individuales como para las bases de un proyecto.
-</p>
-
+| Integrantes | Foto | Descripción del perfil |
+| :--- | :---: | :--- |
+| **Choy Robles, Vanessa May Lang**<br>U202317450 | <img src="assets/cap1/choy.jpeg" alt="Choy" width="100px"/> | Estudiante de Ingeniería de Software con experiencia en distintos lenguajes de programación, diseño UX/UI y trabajo bajo metodologías ágiles como Scrum. Aporto al equipo una visión orientada tanto a la funcionalidad como a la experiencia del usuario, contribuyendo en el desarrollo y mejora continua del producto. Me caracterizo por mi responsabilidad, cumplimiento de plazos y participación activa en el trabajo colaborativo. |
+| **Seminario Castillo,Diego Vicente**<br>U202412951 | <img src="assets/cap1/seminario.jpeg" alt="Seminario" width="100px"/> |  Estudiante de Ingeniería de Software con interés en el análisis, diseño y desarrollo de soluciones tecnológicas. Se caracteriza por su organización, capacidad de adaptación y disposición para colaborar en equipo. |
+| **Aiquipa Poma, Sebastian Andres**<br>U201916755 | <img src="assets/cap1/sebastian.png" alt="Sebastian" width="100px"/> | Estudiante de Ingeniería de Software y desarrollador full-stack. Tengo experiencia construyendo plataformas web completas desde la arquitectura hasta el despliegue utilizando tecnologías como React, Node.js, Express y PostgreSQL. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales. |
+| **Valverde Portuguez, Natalia Ximena**<br>U20231A816 | <img src="assets/cap1/Valverde.png" alt="Valverde" width="100px"/> | Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con conocimientos de Marketing y estoy interesada en el UX Design y data analysis. Experiencia en trabajos de creación de startups en el ámbito laboral, lo que fortalece mis capacidades tanto en trabajos grupales e individuales como para las bases de un proyecto. |
 
 ## 1.2. Solution Profile
 
@@ -535,89 +510,111 @@ Para la validación de necesidades del proyecto, se diseñaron dos guías de ent
 **Segmento #1: Operador de Maquinaria y Planta (Usuario Operativo)**
 
 **Preguntas principales:**
-- ¿Cómo te va actualmente con la forma en que identificas y reportas las fallas mecánicas en los equipos de tu turno?
-- ¿Qué haces normalmente cuando notas que una máquina crítica empieza a sonar mal, vibrar o sobrecalentarse durante la producción?
-- ¿Qué tan fácil o difícil te resulta registrar una falla en las bitácoras o avisar al equipo de mantenimiento sin interrumpir tu trabajo diario?
-- Cuando has reportado una avería antes, ¿qué fue lo que más te preocupó (sufrir un accidente laboral, parar la línea de producción, que te culpen por la falla)?
-- ¿Qué cosas valoras más al momento de operar una máquina (seguridad en el puesto, claridad de los indicadores, rapidez de respuesta ante un fallo, herramientas fáciles de usar)?
-- ¿Con qué frecuencia recibes alertas tempranas sobre el estado real de la maquinaria antes de que se detenga por completo?
-- ¿Te ha pasado que una falla inesperada en la máquina haya detenido la producción por horas o generado un riesgo para tu seguridad? ¿Cómo lo resolvieron?
-- ¿Estarías dispuesto a utilizar una aplicación o pantalla con semáforos visuales (verde, amarillo, rojo) que te alerte el estado de la máquina en tiempo real? ¿Por qué?
-- ¿Qué funcionalidades crees que te facilitarían el trabajo diario (alertas sonoras/visuales, reporte rápido en 1 clic, historial simple de la máquina, estado del sensor en vivo)?
-
-**Preguntas complementarias:**
-- ¿Dónde o a través de qué medio reportas actualmente los problemas de la maquinaria (radio, WhatsApp, formato en papel, aviso verbal al supervisor)?
-- ¿Has utilizado previamente pantallas industriales o herramientas digitales para monitorear equipos? ¿Cómo fue tu experiencia?
-- ¿Qué tan cómodo te sientes usando una interfaz digital a pie de planta en comparación con los formatos físicos de papel?
-- ¿Qué tan dispuesto estarías a formar parte de un proceso donde los operadores tengan control directo y en tiempo real sobre la salud del equipo?
+1. ¿Cómo te va actualmente con la forma en que identificas y reportas las fallas mecánicas en los equipos de tu turno?
+2. ¿Qué haces normalmente cuando notas que una máquina crítica empieza a sonar mal, vibrar o sobrecalentarse durante la producción?
+3. ¿Qué tan fácil o difícil te resulta registrar una falla en las bitácoras o avisar al equipo de mantenimiento sin interrumpir tu trabajo diario?
+4. Cuando has reportado una avería antes, ¿qué fue lo que más te preocupó (sufrir un accidente laboral, parar la línea de producción, que te culpen por la falla)?
+5. ¿Qué cosas valoras más al momento de operar una máquina (seguridad en el puesto, claridad de los indicadores, rapidez de respuesta ante un fallo, herramientas fáciles de usar)?
+6. ¿Con qué frecuencia recibes alertas tempranas sobre el estado real de la maquinaria antes de que se detenga por completo?
+7. ¿Te ha pasado que una falla inesperada en la máquina haya detenido la producción por horas o generado un riesgo para tu seguridad? ¿Cómo lo resolvieron?
+8. ¿Estarías dispuesto a utilizar una aplicación o pantalla con semáforos visuales (verde, amarillo, rojo) que te alerte el estado de la máquina en tiempo real? ¿Por qué?
+9. ¿Qué funcionalidades crees que te facilitarían el trabajo diario (alertas sonoras/visuales, reporte rápido en 1 clic, historial simple de la máquina, estado del sensor en vivo)?
 
 ---
 
 #### **Segmento #2: Área de Mantenimiento y Gestión Operativa (Jefe de Mantenimiento / Ingeniero de Planta)**
 
 **Preguntas principales:**
-- ¿Cómo está actualmente la planta con la forma en que gestionan las fallas e intervenciones de la maquinaria crítica?
-- ¿Qué haces normalmente cuando ocurre una parada de línea no programada por avería de un motor, bomba o compresor?
-- ¿Qué tan fácil o difícil te resulta predecir la vida útil restante de un componente clave antes de que ocurra una falla catastrófica?
-- Cuando coordinas un mantenimiento correctivo de emergencia, ¿qué es lo que más te preocupa (costo por hora de inactividad, disponibilidad de repuestos, seguridad del personal, perder cuotas de producción)?
-- ¿Qué cosas valoras más al evaluar el rendimiento del área de mantenimiento (disponibilidad de planta, reducción de costos, automatización de órdenes de trabajo, precisión del diagnóstico)?
-- ¿Con qué frecuencia realizan mantenimiento preventivo por calendario y cuántas piezas reemplazan que aún se encuentran en buen estado?
-- ¿Te ha pasado que un diagnóstico tardío haya provocado la destrucción total de un activo y cuantiosas pérdidas económicas? ¿Cómo lo resolvieron?
-- ¿Estarías dispuesto a pagar una suscripción SaaS por un software que conecte sensores IoT y prediga fallas con anticipación? ¿Por qué?
-- ¿Qué funcionalidades crees que te facilitarían la gestión desde una plataforma (dashboard centralizado de la planta, estimación RUL de activos, alertas automáticas por umbral, generación y asignación de Órdenes de Trabajo)?
-
-**Preguntas complementarias:**
-- ¿Dónde o con qué herramientas gestionas actualmente el plan de mantenimiento de la empresa (Excel, tarjetas Kanban físicas, software CMMS/ERP costoso)?
-- ¿Cuentan actualmente con sensores IoT instalados en sus activos o qué tan viable ven su integración a corto plazo?
-- ¿Cómo es el proceso actual desde que se detecta una anomalía hasta que el técnico recibe la Orden de Trabajo firmada?
-- ¿Qué tan dispuesto estarías a migrar de un esquema de mantenimiento preventivo rígido a una cultura de mantenimiento predictivo basada en analítica de datos?
+1. ¿Cómo está actualmente la planta con la forma en que gestionan las fallas e intervenciones de la maquinaria crítica?
+2. ¿Qué haces normalmente cuando ocurre una parada de línea no programada por avería de un motor, bomba o compresor?
+3. ¿Qué tan fácil o difícil te resulta predecir la vida útil restante de un componente clave antes de que ocurra una falla catastrófica?
+4. Cuando coordinas un mantenimiento correctivo de emergencia, ¿qué es lo que más te preocupa (costo por hora de inactividad, disponibilidad de repuestos, seguridad del personal, perder cuotas de producción)?
+5. ¿Qué cosas valoras más al evaluar el rendimiento del área de mantenimiento (disponibilidad de planta, reducción de costos, automatización de órdenes de trabajo, precisión del diagnóstico)?
+6. ¿Con qué frecuencia realizan mantenimiento preventivo por calendario y cuántas piezas reemplazan que aún se encuentran en buen estado?
+7. ¿Te ha pasado que un diagnóstico tardío haya provocado la destrucción total de un activo y cuantiosas pérdidas económicas? ¿Cómo lo resolvieron?
+8. ¿Estarías dispuesto a pagar una suscripción SaaS por un software que conecte sensores IoT y prediga fallas con anticipación? ¿Por qué?
+9. ¿Qué funcionalidades crees que te facilitarían la gestión desde una plataforma (dashboard centralizado de la planta, estimación RUL de activos, alertas automáticas por umbral, generación y asignación de Órdenes de Trabajo)?
 
 ---
 
 ### 2.2.2. Registro de entrevistas
 
+#### Segmento 1: Operadores de Maquinaria y Planta
 
-**Entrevista 1 (Segmento 1: Operadores de Maquinaria y Planta)**
-* **Entrevistado:** Jorge Luis Mendoza (38 años)
-* **Cargo:** Operador Senior de Maquinaria y Embotellado
-* **Ubicación / Empresa:** Planta Industrial en Ate, Lima
-* **Duración:** 25 minutos
-* **Resumen de respuestas:** Jorge comenta que las fajas transportadoras y los motores de llenado sufren sobrecalentamientos constantes. Actualmente detectan las fallas cuando sienten "un olor a quemado o una vibración fuerte". Reportar la falla requiere llenar un formato físico y buscar al supervisor, lo que puede tomar hasta 40 minutos mientras la máquina sigue operando forzada. Muestra gran interés en tener un panel con colores verde/amarillo/rojo para detener o ajustar la máquina a tiempo.
-* **Evidencia en video / audio:** [Enlace a grabación de entrevista 1]
+**Entrevista 1**
+* **Entrevistado:** Juan Carlos Quispe (28 años)
+* **Cargo / Ocupación:** Operador de Máquina Extrusora
+* **Ubicación / Empresa:** San Juan de Lurigancho, Lima / Planta de plásticos industriales
+* **Inicio entrevista:** 00:00:00
+* **Duración:** 00:03:45
+* **Resumen de respuestas:** Juan Carlos reporta que actualmente identifica las fallas por oído y por el olor a sobrecalentamiento del equipo. Su mayor frustración es detener su producción para buscar físicamente al mecánico o llenar bitácoras en papel que frecuentemente se pierden. Su principal temor ante una avería es sufrir un accidente por atrapamiento o ser responsabilizado por la gerencia ante el paro de la línea. Posee un perfil pragmático, utiliza diariamente un smartphone Samsung con sistema operativo Android y consume contenidos a través de WhatsApp y TikTok. Al operar prefiere interfaces simples e indicadores visuales claros. Aceptaría gustosamente una pantalla con semáforos (verde, amarillo, rojo), manifestando que sus funcionalidades ideales serían alertas sonoras potentes, reporte de averías con un solo clic y estado de sensores de temperatura en vivo.
+**Evidencia:**
+<img src="assets/cap2/entrevistas/segmento1/entrevista1.png" alt="Screenshot entrevista" width="300">
 
-**Entrevista 2 (Segmento 2: Área de Mantenimiento y Gestión Operativa)**
-* **Entrevistado:** Ing. Carlos Ramírez (46 años)
-* **Cargo:** Jefe de Mantenimiento Planta
-* **Ubicación / Empresa:** Empresa de Procesamiento de Plásticos, Callao
-* **Duración:** 35 minutos
-* **Resumen de respuestas:** El Ing. Ramírez señala que las paradas no programadas les cuestan un promedio de $3,500 por hora de inactividad. Manejan el mantenimiento preventivo con Excel y tarjetas físicas. Su mayor problema es que reemplazan piezas en buen estado por calendario, o intervienen tarde cuando el rodamiento ya destruyó el eje del motor. Requiere un sistema que le diga la **Vida Útil Restante (RUL)** estimada del activo y que genere automáticamente la Orden de Trabajo para enviar al técnico inmediatamente.
-* **Evidencia en video / audio:** [Enlace a grabación de entrevista 2]
 
-**Entrevista (Segmento 2: Área de Mantenimiento y Gestión Operativa)**
+**Entrevista 2**
+* **Entrevistado:** Miguel Ángel Torres (35 años)
+* **Cargo / Ocupación:** Operador de Línea de Envasado
+* **Ubicación / Empresa:** Ate, Lima / Planta procesadora de alimentos
+* **Duración:** 00:04:10
+* **Resumen de respuestas:** Miguel Ángel menciona que cuando detecta una vibración anómala debe esperar a que el supervisor pase por su zona o comunicarse mediante radiofrecuencia, lo que retrasa la atención. En una oportunidad previa, la rotura no detectada de un rodamiento detuvo la producción durante seis horas, lo que le provocó gran ansiedad por no cumplir su cuota del día. Es un usuario digital habitual de marcas como Xiaomi, utiliza activamente el navegador Google Chrome para búsquedas y la aplicación Facebook para informarse. Valora sobre todo la seguridad laboral y la rapidez de respuesta del equipo técnico. Afirma que utilizaría una plataforma móvil o pantalla táctil si cuenta con semáforos de alerta en tiempo real, destacando la necesidad de un botón de reporte directo de averías y la visualización directa del estado operativo del equipo.
+**Evidencia:**
+<img src="assets/cap2/entrevistas/segmento1/entrevista2.png" alt="Screenshot entrevista" width="300">
+
+**Entrevista 3**
+* **Entrevistado:** Luis Alberto Gómez (24 años)
+* **Cargo / Ocupación:** Operador de Compresores y Maquinaria Auxiliar
+* **Ubicación / Empresa:** Callao / Planta metalmecánica
+* **Duración:** 00:03:15
+* **Resumen de respuestas:** Luis Alberto explica que el sistema actual de reporte en hojas de cálculo compartidas resulta tedioso e interrumpe su ritmo de trabajo. Cuando nota fallas térmicas en los compresores, suele reducir manualmente la velocidad del equipo por temor a una explosión o accidente. Es nativo digital, utiliza un smartphone Motorola con Android, navega mediante Mozilla Firefox y utiliza Telegram para comunicaciones laborales grupales. Le motiva la implementación de tecnología moderna en planta. Manifiesta que un sistema visual basado en códigos de color le facilitaría significativamente su labor cotidiana, pidiendo que incluya alertas sonoras para entornos ruidosos y un historial sencillo de las últimas fallas de la máquina.
+**Evidencia:**
+<img src="assets/cap2/entrevistas/segmento1/entrevista3.png" alt="Screenshot entrevista" width="300">
+
+
+
+#### Segmento 2: Área de Mantenimiento y Gestión Operativa
+
+**Entrevista 1**
+* **Entrevistado:** Cristian Parado(32 años)
+* **Cargo:** Ingeniero de Planta
+* **Ubicación / Empresa:** Lima / Planta de procesamiento industrial y manufactura
+* **Duración:** 7 minutos
+* **Resumen de respuestas:** Cristian señala que en su planta combinan el mantenimiento preventivo por calendario con el correctivo ante fallas inesperadas. Explica que predecir la vida útil restante (RUL) de componentes críticos sin sensores ni datos históricos es sumamente difícil, dependiente de horas teóricas que a menudo provocan el reemplazo prematuro de piezas en buen estado. Ante una parada de emergencia, su principal preocupación radica en los elevados costos por hora de inactividad, la falta de repuestos en stock y la seguridad. Es un profesional analítico que interactúa a través de laptops Lenovo con Windows 11, utiliza Google Chrome y gestiona proyectos mediante software como Microsoft Excel y herramientas en la nube. Está completamente dispuesto a pagar una suscripción SaaS por un software predictivo con sensores IoT. Requiere un dashboard centralizado, estimación RUL de activos, alertas automáticas por umbral y generación fluida de órdenes de trabajo.
+**Evidencia:**
+<img src="assets/cap2/entrevistas/segmento2/entrevistacristian.png" alt="Screenshot entrevista" width="300">
+
+**Entrevista 2**
 * **Entrevistado:** Jorge Salazar (50 años)
 * **Cargo:** Supervisor de Mantenimiento
-* **Ubicación / Empresa:** Planta de manufactura mediana, rubro metalmecánico, San Juan de Lurigancho, Lima
-* **Duración:** 5 minutos
-* **Resumen de respuestas:** Jorge señala que el plan de mantenimiento de su planta es mayormente reactivo y preventivo por calendario, con frecuencias fijas de revisión que no reflejan el desgaste real de los activos. Estima que una parada de línea crítica puede costar entre S/. 3,000 y S/. 8,000 por hora, y que aproximadamente un tercio del presupuesto anual del área se destina a emergencias no planificadas. La asignación de órdenes de trabajo se gestiona verbalmente o por WhatsApp, con registro en Excel que frecuentemente queda desactualizado. Indica que el cálculo del OEE se realiza de forma manual y mensual, y que consolidar los datos para presentar a Gerencia puede tomar varias horas. Respecto a herramientas previas, señala que los CMMS evaluados resultaban costosos o rígidos para el tamaño de su operación, sin integración real con sensores IoT. Como requisitos indispensables para adoptar una solución, menciona: interfaz simple de usar desde el celular, alertas con anticipación antes de que falle la línea, generación automática de órdenes de trabajo, y un modelo de precios accesible para plantas medianas.
-* **Evidencia en video / audio:**[Enlace a grabacion entrevista 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQBz20sD2aUtQrsNGRWGmxHJAeQC4lye6AYGKppsCWPJrRg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yxNGsL)
-* <img src="assets/cap2/entrevistas/segmento2/entrevistaJorge.png" alt="Screenshot entrevista 3" width="300">
+* **Ubicación / Empresa:** San Juan de Lurigancho, Lima / Planta metalmecánica mediana
+* **Duración:** 00:05:30
+* **Resumen de respuestas:** Jorge indica que el mantenimiento de su planta es mayoritariamente reactivo y preventivo por fechas fijas. Menciona que las paradas no programadas en líneas críticas generan pérdidas de S/. 3,000 a S/. 8,000 por hora, consumiendo un tercio del presupuesto anual en emergencias. La comunicación se realiza de forma informal por WhatsApp y llamadas, derivando en registros desactualizados en Excel. Utiliza computadoras de escritorio y un smartphone Samsung, accediendo a plataformas web mediante Google Chrome. Considera que los sistemas CMMS tradicionales son costosos y complejos. Pagaría una suscripción SaaS por una plataforma accesible que se conecte a sensores IoT, solicitando como funcionalidades esenciales un panel de control simple, alertas preventivas antes del fallo catastrófico y automatización en la asignación de órdenes de trabajo a los técnicos.
+**Evidencia:**
+<img src="assets/cap2/entrevistas/segmento2/entrevistaJorge.png" alt="Screenshot entrevista" width="300">
 
+
+**Entrevista 3**
+* **Entrevistado:** Carlos Mendoza (41 años)
+* **Cargo:** Jefe de Mantenimiento y Maquinaria
+* **Ubicación / Empresa:** Ate, Lima / Planta de alimentos y bebidas
+* **Duración:** 00:04:50
+* **Resumen de respuestas:** Carlos detalla que operan guiándose por horas de marcha, lo que no evita fallas imprevistas en rodamientos y motores principales que detienen la producción. Recordó un evento donde el diagnóstico tardío destruyó un motor principal, originando pérdidas superiores a S/. 25,000 entre reparación y producción detenida. En su rutina digital emplea tablets industriales Android en planta y laptops Dell en oficina, utilizando navegadores Edge y comunicándose por correo corporativo en Outlook y LinkedIn. Muestra alta receptividad hacia un modelo SaaS con sensores IoT siempre que permita optimizar la disponibilidad de planta. Considera indispensables el monitoreo de variables en vivo, alertas por sobrepaso de umbrales térmicos/vibratorios y la generación inmediata de órdenes de trabajo para su equipo técnico.
+**Evidencia:**
+<img src="assets/cap2/entrevistas/segmento2/entrevista3.png" alt="Screenshot entrevista" width="300">
+
+
+Video:<br>
+[Enlace a grabacion entrevista 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQBz20sD2aUtQrsNGRWGmxHJAeQC4lye6AYGKppsCWPJrRg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yxNGsL)
 ---
 
 ### 2.2.3. Análisis de entrevistas
 
 
-1. Detección tardía y métodos empíricos (Operadores)
-* **Hallazgo:** Los operadores dependen en más de un 80% de sus sentidos (oído, tacto, olor) para detectar fallas en las máquinas.
-* **Necesidad:** Requieren sensores IoT que traduzcan las lecturas de vibración y temperatura en **indicadores visuales simples y en tiempo real** directos en pantalla, evitando que dependan de la percepción humana.
+El análisis cualitativo y estadístico derivado del estudio de campo con los representantes de ambos segmentos objetivo permite estructurar los fundamentos para el diseño de la solución digital y la construcción de los arquetipos de usuario.
 
-2. Alto costo de la inactividad no planificada (Gestores de Mantenimiento)
-* **Hallazgo:** Las paradas intempestivas representan sobrecostos severos por horas extra de personal técnico e importación de repuestos de emergencia.
-* **Necesidad:** Los jefes de planta demandan algoritmos de **detección de anomalías** e indicadores de **RUL (Remaining Useful Life)** para programar las intervenciones durante los cambios de turno o paradas planificadas.
+En lo correspondiente al Segmento 1: Operador de Maquinaria y Planta, los datos recolectados indican que el 100% de los operadores identifica actualmente los problemas mecánicos mediante percepción sensorial directa (ruidos, vibraciones excesivas o sobrecalentamiento al tacto). Un 100% manifiesta una alta frustración ante los métodos de reporte actuales (bitácoras físicas en papel o avisos verbales), señalando que interrumpen su trabajo diario y generan demoras operativas. Ante la ocurrencia de una avería, el 66.7% de los operadores expresa que su mayor preocupación es sufrir un accidente de trabajo por fallas inesperadas de la máquina, mientras que el 33.3% teme ser culpado por la gerencia ante la paralización de la línea de producción. En el ámbito tecnológico y de canales, el 100% de los operadores utiliza smartphones con sistema operativo Android (marcas Samsung, Xiaomi y Motorola) y utiliza aplicaciones móviles como WhatsApp y redes sociales como canal de comunicación habitual. Finalmente, existe un 100% de aceptación para la adopción de una pantalla o aplicación con semáforos visuales en tiempo real (verde, amarillo, rojo), donde el 100% considera indispensable la funcionalidad de reporte rápido en 1 clic y la emisión de alertas sonoras y visuales inmediatas.
 
-3. Fricción en el flujo de reporte y asignación de órdenes (Proceso)
-* **Hallazgo:** El uso de bitácoras de papel o reportes verbales genera pérdidas de tiempo de entre 30 y 60 minutos desde que se detecta el problema hasta que se emite la orden de reparación.
-* **Necesidad:** El sistema debe **automatizar la generación de Órdenes de Trabajo (OT)** cuando los sensores superen los umbrales de alerta predefinidos, enviando notificaciones directas al personal de turno.
+Por su parte, el análisis del Segmento 2: Área de Mantenimiento y Gestión Operativa evidencia que el 100% de las plantas representadas gestiona la maquinaria mediante una combinación de mantenimiento preventivo fijado por calendario y correctivo de emergencia. El 100% de los responsables confirma la imposibilidad práctica de predecir la vida útil restante (RUL) de componentes críticos bajo sus esquemas actuales, lo que ocasiona que el 66.7% reemplace de forma prematura piezas que aún se encuentran en buen estado. El impacto económico de las paradas no programadas es crítico: el 100% coincide en que el costo por hora de inactividad (que oscila entre S/. 3,000 y S/. 8,000) y el riesgo de incumplir las cuotas de producción representan sus mayores preocupaciones. En el aspecto tecnológico, el 100% de los jefes e ingenieros utiliza computadoras portátiles o de escritorio (Dell, Lenovo) con sistema operativo Windows, el navegador Google Chrome para la gestión y canales formales como correo corporativo junto a WhatsApp para coordinaciones de campo. Respecto a la viabilidad comercial y funcional, el 100% de los entrevistados afirma que estaría dispuesto a pagar una suscripción SaaS por un software conectado a sensores IoT predictivos, exigiendo como funcionalidades críticas un dashboard centralizado de planta, la estimación del RUL de los activos, la recepción de alertas automáticas por umbral y la automatización en la generación y asignación de órdenes de trabajo.
 
 
 ## 2.3. Needfinding

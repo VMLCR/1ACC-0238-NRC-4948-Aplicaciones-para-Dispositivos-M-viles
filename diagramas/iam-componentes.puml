@@ -1,0 +1,96 @@
+@startuml
+!pragma layout smetana
+title <size:24>Component View: PredictiveMaintain - Identity & Access Management API</size>
+
+set separator none
+top to bottom direction
+skinparam ranksep 60
+skinparam nodesep 30
+hide stereotype
+
+<style>
+  root {
+    BackgroundColor: #ffffff;
+    FontColor: #444444;
+  }
+  // Element
+  .Element-RWxlbWVudA== {
+    BackgroundColor: #eaf1f8;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+    MaximumWidth: 450;
+  }
+  // Element,Component
+  .Element-RWxlbWVudCxDb21wb25lbnQ= {
+    BackgroundColor: #d8e8f7;
+    LineColor: #97a2ac;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+    MaximumWidth: 450;
+  }
+  // Relationship
+  .Relationship-UmVsYXRpb25zaGlw {
+    LineThickness: 2;
+    LineStyle: 10-10;
+    LineColor: #444444;
+    FontColor: #444444;
+    FontSize: 24;
+  }
+  // Identity & Access Management API
+  .Boundary-SWRlbnRpdHkgJiBBY2Nlc3MgTWFuYWdlbWVudCBBUEk= {
+    BackgroundColor: #ffffff;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+  }
+  // PredictiveMaintain
+  .Boundary-UHJlZGljdGl2ZU1haW50YWlu {
+    BackgroundColor: #ffffff;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+  }
+</style>
+
+rectangle "==Email Service\n<size:16>[Software System]</size>\n\nNotificaciones y recuperacion de acceso" <<Element-RWxlbWVudA==>> as EmailService
+
+rectangle "PredictiveMaintain\n<size:16>[Software System]</size>" <<Boundary-UHJlZGljdGl2ZU1haW50YWlu>> {
+  rectangle "Identity & Access Management API\n<size:16>[Container: NestJS / TypeScript]</size>" <<Boundary-SWRlbnRpdHkgJiBBY2Nlc3MgTWFuYWdlbWVudCBBUEk=>> {
+    rectangle "==Iam Controllers\n<size:16>[Component: NestJS controllers]</size>\n\nValida recursos y expone REST" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.IdentityAccessManagementAPI.IamControllers
+    rectangle "==Application Handlers\n<size:16>[Component: TypeScript]</size>\n\nRegisterCompanyAccountHandler, RequestPasswordResetHandler, ResetPasswordHandler, UpdateProfileHandler, LoginHandler, CreateUserHandler, ChangeRolesHandler, DeactivateUserHandler, GetUserStatusHandler" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.IdentityAccessManagementAPI.ApplicationHandlers
+    rectangle "==Domain Model\n<size:16>[Component: TypeScript]</size>\n\nUserAccount, Role, UserRole, PasswordResetRequest" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.IdentityAccessManagementAPI.DomainModel
+    rectangle "==PostgresIamRepository\n<size:16>[Component: PostgreSQL adapter]</size>\n\nImplementa IIamRepository" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.IdentityAccessManagementAPI.PostgresIamRepository
+    rectangle "==PasswordHashAdapter + JwtTokenAdapter\n<size:16>[Component: Cryptographic adapters]</size>\n\nVerifica credenciales y emite tokens" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.IdentityAccessManagementAPI.PasswordHashAdapterJwtTokenAdapter
+  }
+
+  rectangle "==API Gateway\n<size:16>[Container: Nginx]</size>\n\nTermina TLS y enruta" <<Element-RWxlbWVudA==>> as PredictiveMaintain.APIGateway
+  rectangle "==Iam Database\n<size:16>[Container: PostgreSQL]</size>\n\nPersistencia exclusiva del contexto" <<Element-RWxlbWVudA==>> as PredictiveMaintain.IamDatabase
+}
+
+PredictiveMaintain.IdentityAccessManagementAPI.ApplicationHandlers --> PredictiveMaintain.IdentityAccessManagementAPI.PasswordHashAdapterJwtTokenAdapter <<Relationship-UmVsYXRpb25zaGlw>> : "Verifica hash / emite token"
+PredictiveMaintain.APIGateway --> PredictiveMaintain.IdentityAccessManagementAPI.IamControllers <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta solicitudes REST\n<size:16>[HTTP privado]</size>"
+PredictiveMaintain.IdentityAccessManagementAPI.IamControllers --> PredictiveMaintain.IdentityAccessManagementAPI.ApplicationHandlers <<Relationship-UmVsYXRpb25zaGlw>> : "Invoca casos de uso"
+PredictiveMaintain.IdentityAccessManagementAPI.ApplicationHandlers --> PredictiveMaintain.IdentityAccessManagementAPI.DomainModel <<Relationship-UmVsYXRpb25zaGlw>> : "Aplica reglas"
+PredictiveMaintain.IdentityAccessManagementAPI.ApplicationHandlers --> PredictiveMaintain.IdentityAccessManagementAPI.PostgresIamRepository <<Relationship-UmVsYXRpb25zaGlw>> : "Usa puerto de repositorio"
+PredictiveMaintain.IdentityAccessManagementAPI.PostgresIamRepository --> PredictiveMaintain.IdentityAccessManagementAPI.DomainModel <<Relationship-UmVsYXRpb25zaGlw>> : "Implementa contrato del dominio"
+PredictiveMaintain.IdentityAccessManagementAPI.PostgresIamRepository --> PredictiveMaintain.IamDatabase <<Relationship-UmVsYXRpb25zaGlw>> : "Lee y escribe\n<size:16>[SQL]</size>"
+PredictiveMaintain.IdentityAccessManagementAPI.PasswordHashAdapterJwtTokenAdapter --> EmailService <<Relationship-UmVsYXRpb25zaGlw>> : "Enlace de recuperacion US-22\n<size:16>[HTTPS]</size>"
+
+@enduml

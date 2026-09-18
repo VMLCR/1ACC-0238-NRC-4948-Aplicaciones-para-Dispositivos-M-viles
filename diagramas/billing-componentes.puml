@@ -1,0 +1,91 @@
+@startuml
+!pragma layout smetana
+title <size:24>Component View: PredictiveMaintain - Subscription & Billing API</size>
+
+set separator none
+top to bottom direction
+skinparam ranksep 60
+skinparam nodesep 30
+hide stereotype
+
+<style>
+  root {
+    BackgroundColor: #ffffff;
+    FontColor: #444444;
+  }
+  // Element
+  .Element-RWxlbWVudA== {
+    BackgroundColor: #eaf1f8;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+    MaximumWidth: 450;
+  }
+  // Element,Component
+  .Element-RWxlbWVudCxDb21wb25lbnQ= {
+    BackgroundColor: #d8e8f7;
+    LineColor: #97a2ac;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+    MaximumWidth: 450;
+  }
+  // Relationship
+  .Relationship-UmVsYXRpb25zaGlw {
+    LineThickness: 2;
+    LineStyle: 10-10;
+    LineColor: #444444;
+    FontColor: #444444;
+    FontSize: 24;
+  }
+  // PredictiveMaintain
+  .Boundary-UHJlZGljdGl2ZU1haW50YWlu {
+    BackgroundColor: #ffffff;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+  }
+  // Subscription & Billing API
+  .Boundary-U3Vic2NyaXB0aW9uICYgQmlsbGluZyBBUEk= {
+    BackgroundColor: #ffffff;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+  }
+</style>
+
+rectangle "PredictiveMaintain\n<size:16>[Software System]</size>" <<Boundary-UHJlZGljdGl2ZU1haW50YWlu>> {
+  rectangle "Subscription & Billing API\n<size:16>[Container: NestJS / TypeScript]</size>" <<Boundary-U3Vic2NyaXB0aW9uICYgQmlsbGluZyBBUEk=>> {
+    rectangle "==Billing Controllers\n<size:16>[Component: NestJS controllers]</size>\n\nValida recursos y expone REST" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.SubscriptionBillingAPI.BillingControllers
+    rectangle "==Application Handlers\n<size:16>[Component: TypeScript]</size>\n\nRegisterCompanyHandler, ChangeSubscriptionPlanHandler, CheckSubscriptionExpiryHandler, CreateSubscriptionHandler, ReserveCapacityHandler, ConfirmCapacityHandler, ReleaseCapacityHandler, IssueInvoiceHandler" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.SubscriptionBillingAPI.ApplicationHandlers
+    rectangle "==Domain Model\n<size:16>[Component: TypeScript]</size>\n\nCompany, SubscriptionPlan, Subscription, CapacityReservation, Invoice" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.SubscriptionBillingAPI.DomainModel
+    rectangle "==PostgresBillingRepository\n<size:16>[Component: PostgreSQL adapter]</size>\n\nImplementa IBillingRepository" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.SubscriptionBillingAPI.PostgresBillingRepository
+  }
+
+  rectangle "==API Gateway\n<size:16>[Container: Nginx]</size>\n\nTermina TLS y enruta" <<Element-RWxlbWVudA==>> as PredictiveMaintain.APIGateway
+  rectangle "==Billing Database\n<size:16>[Container: PostgreSQL]</size>\n\nPersistencia exclusiva del contexto" <<Element-RWxlbWVudA==>> as PredictiveMaintain.BillingDatabase
+}
+
+PredictiveMaintain.APIGateway --> PredictiveMaintain.SubscriptionBillingAPI.BillingControllers <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta solicitudes REST\n<size:16>[HTTP privado]</size>"
+PredictiveMaintain.SubscriptionBillingAPI.BillingControllers --> PredictiveMaintain.SubscriptionBillingAPI.ApplicationHandlers <<Relationship-UmVsYXRpb25zaGlw>> : "Invoca casos de uso"
+PredictiveMaintain.SubscriptionBillingAPI.ApplicationHandlers --> PredictiveMaintain.SubscriptionBillingAPI.DomainModel <<Relationship-UmVsYXRpb25zaGlw>> : "Aplica reglas"
+PredictiveMaintain.SubscriptionBillingAPI.ApplicationHandlers --> PredictiveMaintain.SubscriptionBillingAPI.PostgresBillingRepository <<Relationship-UmVsYXRpb25zaGlw>> : "Usa puerto de repositorio"
+PredictiveMaintain.SubscriptionBillingAPI.PostgresBillingRepository --> PredictiveMaintain.SubscriptionBillingAPI.DomainModel <<Relationship-UmVsYXRpb25zaGlw>> : "Implementa contrato del dominio"
+PredictiveMaintain.SubscriptionBillingAPI.PostgresBillingRepository --> PredictiveMaintain.BillingDatabase <<Relationship-UmVsYXRpb25zaGlw>> : "Lee y escribe\n<size:16>[SQL]</size>"
+
+@enduml

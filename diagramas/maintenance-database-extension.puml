@@ -1,0 +1,79 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam classBackgroundColor #EEF4FB
+title Maintenance Operations - Persistencia complementaria
+entity assets {
+ * id: uuid <<PK>>
+ * tenant_id: uuid
+ * plant_id: uuid <<FK>>
+}
+entity plants {
+ * id: uuid <<PK>>
+ * tenant_id: uuid
+ * name: varchar(120)
+ * default_responsible_user_id: uuid
+}
+entity alerts {
+ * id: uuid <<PK>>
+ * tenant_id: uuid
+ * asset_id: uuid <<FK>>
+}
+entity notification_preferences {
+ * id: uuid <<PK>>
+ * tenant_id: uuid
+ * plant_id: uuid <<FK>>
+ * asset_type: varchar(80)
+ * recipient_user_id: uuid
+ * channel: varchar(10)
+}
+entity notification_deliveries {
+ * id: uuid <<PK>>
+ * tenant_id: uuid
+ * alert_id: uuid <<FK>>
+ * recipient_user_id: uuid
+ * channel: varchar(10)
+ * status: varchar(20)
+ * attempted_at: timestamptz
+}
+entity downtime_intervals {
+ * id: uuid <<PK>>
+ * tenant_id: uuid
+ * asset_id: uuid <<FK>>
+ * started_at: timestamptz
+ ended_at: timestamptz
+}
+entity production_windows {
+ * id: uuid <<PK>>
+ * tenant_id: uuid
+ * asset_id: uuid <<FK>>
+ * starts_at: timestamptz
+ * ends_at: timestamptz
+ * planned_seconds: numeric
+ operating_seconds: numeric
+ total_units: integer
+ good_units: integer
+ ideal_cycle_seconds: numeric
+}
+plants ||--o{ assets : agrupa
+plants ||--o{ notification_preferences : configura
+assets ||--o{ alerts : recibe
+alerts ||--o{ notification_deliveries : notifica
+assets ||--o{ downtime_intervals : registra
+assets ||--o{ production_windows : mide
+legend bottom
+* NOT NULL. Todas las FK locales incluyen tenant_id.
+UNIQUE(tenant_id,id) en plants, assets y alerts.
+CHECK channel IN (PUSH, EMAIL).
+CHECK ended_at IS NULL OR ended_at > started_at.
+CHECK ends_at > starts_at; planned_seconds > 0.
+Si presentes: 0 <= operating_seconds <= planned_seconds;
+0 <= good_units <= total_units; ideal_cycle_seconds > 0.
+UNIQUE(tenant_id,asset_id,starts_at,ends_at) en production_windows.
+Las ventanas de producción no se solapan para el mismo activo.
+Los UUID de usuario son referencias externas al contexto IAM.
+endlegend
+@enduml

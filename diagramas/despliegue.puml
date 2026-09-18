@@ -1,0 +1,119 @@
+@startuml
+!pragma layout smetana
+title <size:24>Deployment View: PredictiveMaintain - TB1-Propuesto</size>
+
+set separator none
+top to bottom direction
+skinparam ranksep 60
+skinparam nodesep 30
+hide stereotype
+
+<style>
+  root {
+    BackgroundColor: #ffffff;
+    FontColor: #444444;
+  }
+  // Element
+  .Element-RWxlbWVudA== {
+    BackgroundColor: #eaf1f8;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+    MaximumWidth: 450;
+  }
+  // Relationship
+  .Relationship-UmVsYXRpb25zaGlw {
+    LineThickness: 2;
+    LineStyle: 10-10;
+    LineColor: #444444;
+    FontColor: #444444;
+    FontSize: 24;
+  }
+  // Element
+  .DeploymentNode-RWxlbWVudA== {
+    BackgroundColor: #eaf1f8;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+  }
+</style>
+
+rectangle "Proveedor de clima\n<size:16>[Deployment Node: HTTPS]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Proveedordeclima {
+  rectangle "==Weather API\n<size:16>[Software System]</size>\n\nTemperatura y humedad por coordenadas, US-29" <<Element-RWxlbWVudA==>> as TB1Propuesto.Proveedordeclima.WeatherAPI_1
+}
+
+rectangle "Proveedor de correo\n<size:16>[Deployment Node: HTTPS]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Proveedordecorreo {
+  rectangle "==Email Service\n<size:16>[Software System]</size>\n\nNotificaciones y recuperacion de acceso" <<Element-RWxlbWVudA==>> as TB1Propuesto.Proveedordecorreo.EmailService_1
+}
+
+rectangle "Planta industrial\n<size:16>[Deployment Node: Dispositivo IoT]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Plantaindustrial {
+  rectangle "==Sensores IoT\n<size:16>[Software System]</size>\n\nOrigen real o simulado de lecturas" <<Element-RWxlbWVudA==>> as TB1Propuesto.Plantaindustrial.SensoresIoT_1
+}
+
+rectangle "Servicio externo de notificaciones\n<size:16>[Deployment Node: Firebase]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Servicioexternodenotificaciones {
+  rectangle "==Firebase Cloud Messaging\n<size:16>[Software System]</size>\n\nEntrega notificaciones" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servicioexternodenotificaciones.FirebaseCloudMessaging_1
+}
+
+rectangle "Dispositivo movil\n<size:16>[Deployment Node: Android]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Dispositivomovil {
+  rectangle "==Mobile Application\n<size:16>[Container: Flutter / Dart]</size>\n\nConsulta activos y atiende ordenes" <<Element-RWxlbWVudA==>> as TB1Propuesto.Dispositivomovil.MobileApplication_1
+}
+
+rectangle "Navegador\n<size:16>[Deployment Node: Browser]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Navegador {
+  rectangle "==Web Management\n<size:16>[Container: Angular propuesto]</size>\n\nCliente de gestion propuesto" <<Element-RWxlbWVudA==>> as TB1Propuesto.Navegador.WebManagement_1
+}
+
+rectangle "Hosting estatico\n<size:16>[Deployment Node: HTTPS]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Hostingestatico {
+  rectangle "==Landing Page\n<size:16>[Container: HTML / CSS / JavaScript]</size>\n\nPresentacion del producto" <<Element-RWxlbWVudA==>> as TB1Propuesto.Hostingestatico.LandingPage_1
+}
+
+rectangle "Servidor de aplicaciones\n<size:16>[Deployment Node: Linux]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones {
+  rectangle "==API Gateway\n<size:16>[Container: Nginx]</size>\n\nTermina TLS y enruta" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.APIGateway_1
+  rectangle "Red privada\n<size:16>[Deployment Node: Docker network propuesto]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.Redprivada {
+    rectangle "==Asset Telemetry & Analytics API\n<size:16>[Container: NestJS / TypeScript]</size>\n\nLecturas, umbrales y resultados analiticos" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.Redprivada.AssetTelemetryAnalyticsAPI_1
+    rectangle "==Maintenance Operations API\n<size:16>[Container: NestJS / TypeScript]</size>\n\nActivos, alertas, ordenes y evidencias" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1
+    rectangle "==Subscription & Billing API\n<size:16>[Container: NestJS / TypeScript]</size>\n\nPlanes, suscripciones y capacidad" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.Redprivada.SubscriptionBillingAPI_1
+    rectangle "==Identity & Access Management API\n<size:16>[Container: NestJS / TypeScript]</size>\n\nIdentidad, autenticacion y roles" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.Redprivada.IdentityAccessManagementAPI_1
+    rectangle "==Event Broker\n<size:16>[Container: RabbitMQ propuesto]</size>\n\nEntrega eventos con reintentos" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.Redprivada.EventBroker_1
+    rectangle "==Evidence Storage\n<size:16>[Container: Volumen persistente]</size>\n\nImagenes de intervenciones" <<Element-RWxlbWVudA==>> as TB1Propuesto.Servidordeaplicaciones.Redprivada.EvidenceStorage_1
+  }
+
+}
+
+rectangle "Servidor PostgreSQL\n<size:16>[Deployment Node: PostgreSQL]</size>" <<DeploymentNode-RWxlbWVudA==>> as TB1Propuesto.ServidorPostgreSQL {
+  rectangle "==Telemetry Database\n<size:16>[Container: PostgreSQL]</size>\n\nPersistencia exclusiva del contexto" <<Element-RWxlbWVudA==>> as TB1Propuesto.ServidorPostgreSQL.TelemetryDatabase_1
+  rectangle "==Maintenance Database\n<size:16>[Container: PostgreSQL]</size>\n\nPersistencia exclusiva del contexto" <<Element-RWxlbWVudA==>> as TB1Propuesto.ServidorPostgreSQL.MaintenanceDatabase_1
+  rectangle "==Billing Database\n<size:16>[Container: PostgreSQL]</size>\n\nPersistencia exclusiva del contexto" <<Element-RWxlbWVudA==>> as TB1Propuesto.ServidorPostgreSQL.BillingDatabase_1
+  rectangle "==Iam Database\n<size:16>[Container: PostgreSQL]</size>\n\nPersistencia exclusiva del contexto" <<Element-RWxlbWVudA==>> as TB1Propuesto.ServidorPostgreSQL.IamDatabase_1
+}
+
+TB1Propuesto.Servicioexternodenotificaciones.FirebaseCloudMessaging_1 --> TB1Propuesto.Dispositivomovil.MobileApplication_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Notifica\n<size:16>[Push]</size>"
+TB1Propuesto.Plantaindustrial.SensoresIoT_1 --> TB1Propuesto.Servidordeaplicaciones.APIGateway_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Ingesta\n<size:16>[HTTPS]</size>"
+TB1Propuesto.Dispositivomovil.MobileApplication_1 --> TB1Propuesto.Servidordeaplicaciones.APIGateway_1 <<Relationship-UmVsYXRpb25zaGlw>> : "REST\n<size:16>[HTTPS]</size>"
+TB1Propuesto.Navegador.WebManagement_1 --> TB1Propuesto.Servidordeaplicaciones.APIGateway_1 <<Relationship-UmVsYXRpb25zaGlw>> : "REST\n<size:16>[HTTPS]</size>"
+TB1Propuesto.Servidordeaplicaciones.APIGateway_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.AssetTelemetryAnalyticsAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta\n<size:16>[HTTP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 --> TB1Propuesto.Proveedordeclima.WeatherAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Consulta clima US-29\n<size:16>[HTTPS]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 --> TB1Propuesto.Proveedordecorreo.EmailService_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Notificaciones EMAIL\n<size:16>[HTTPS]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 --> TB1Propuesto.Servicioexternodenotificaciones.FirebaseCloudMessaging_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Solicita notificacion\n<size:16>[HTTPS]</size>"
+TB1Propuesto.Servidordeaplicaciones.APIGateway_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta\n<size:16>[HTTP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.APIGateway_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.SubscriptionBillingAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta\n<size:16>[HTTP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.SubscriptionBillingAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Reserva / confirma cupo\n<size:16>[HTTP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.IdentityAccessManagementAPI_1 --> TB1Propuesto.Proveedordecorreo.EmailService_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Enlace de recuperacion US-22\n<size:16>[HTTPS]</size>"
+TB1Propuesto.Servidordeaplicaciones.APIGateway_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.IdentityAccessManagementAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta\n<size:16>[HTTP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.IdentityAccessManagementAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Verifica tecnico\n<size:16>[HTTP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.AssetTelemetryAnalyticsAPI_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.EventBroker_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Publica eventos\n<size:16>[AMQP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.EventBroker_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Entrega eventos\n<size:16>[AMQP privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 --> TB1Propuesto.Servidordeaplicaciones.Redprivada.EvidenceStorage_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Guarda / recupera evidencia\n<size:16>[Filesystem privado]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.AssetTelemetryAnalyticsAPI_1 --> TB1Propuesto.ServidorPostgreSQL.TelemetryDatabase_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Lee y escribe\n<size:16>[SQL]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.MaintenanceOperationsAPI_1 --> TB1Propuesto.ServidorPostgreSQL.MaintenanceDatabase_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Lee y escribe\n<size:16>[SQL]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.SubscriptionBillingAPI_1 --> TB1Propuesto.ServidorPostgreSQL.BillingDatabase_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Lee y escribe\n<size:16>[SQL]</size>"
+TB1Propuesto.Servidordeaplicaciones.Redprivada.IdentityAccessManagementAPI_1 --> TB1Propuesto.ServidorPostgreSQL.IamDatabase_1 <<Relationship-UmVsYXRpb25zaGlw>> : "Lee y escribe\n<size:16>[SQL]</size>"
+
+@enduml

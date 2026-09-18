@@ -1,0 +1,49 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classBackgroundColor #EEF4FB
+skinparam classBorderColor #24527A
+hide empty members
+
+title Identity & Access Management - Database Design (PostgreSQL)
+
+entity "user_accounts" as UserAccount {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * email: varchar(254)
+  {field} * display_name: varchar(120)
+  {field} * password_hash: text
+  {field} * active: boolean
+  {field} * created_at: timestamptz
+}
+entity "roles" as Role {
+  {field} * id: uuid <<PK>>
+  {field} * name: varchar(40)
+}
+entity "user_roles" as UserRole {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * user_id: uuid <<FK>>
+  {field} * role_id: uuid <<FK>>
+}
+UserAccount ||--o{ UserRole : contiene
+Role ||--o{ UserRole : clasifica
+legend bottom
+* NOT NULL. PK: primary key.
+Las FKs compuestas, unicidad y CHECK se detallan en el informe.
+Los identificadores de otros contextos no son FKs entre bases.
+endlegend
+entity "password_reset_requests" as PasswordResetRequest {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * user_id: uuid <<FK>>
+  {field} * token_hash: text
+  {field} * expires_at: timestamptz
+  {field}  used_at: timestamptz
+}
+UserAccount ||--o{ PasswordResetRequest : solicita
+@enduml

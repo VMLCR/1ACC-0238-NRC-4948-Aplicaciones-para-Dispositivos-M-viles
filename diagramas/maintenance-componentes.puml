@@ -1,0 +1,113 @@
+@startuml
+!pragma layout smetana
+title <size:24>Component View: PredictiveMaintain - Maintenance Operations API</size>
+
+set separator none
+top to bottom direction
+skinparam ranksep 60
+skinparam nodesep 30
+hide stereotype
+
+<style>
+  root {
+    BackgroundColor: #ffffff;
+    FontColor: #444444;
+  }
+  // Element
+  .Element-RWxlbWVudA== {
+    BackgroundColor: #eaf1f8;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+    MaximumWidth: 450;
+  }
+  // Element,Component
+  .Element-RWxlbWVudCxDb21wb25lbnQ= {
+    BackgroundColor: #d8e8f7;
+    LineColor: #97a2ac;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+    MaximumWidth: 450;
+  }
+  // Relationship
+  .Relationship-UmVsYXRpb25zaGlw {
+    LineThickness: 2;
+    LineStyle: 10-10;
+    LineColor: #444444;
+    FontColor: #444444;
+    FontSize: 24;
+  }
+  // Maintenance Operations API
+  .Boundary-TWFpbnRlbmFuY2UgT3BlcmF0aW9ucyBBUEk= {
+    BackgroundColor: #ffffff;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+  }
+  // PredictiveMaintain
+  .Boundary-UHJlZGljdGl2ZU1haW50YWlu {
+    BackgroundColor: #ffffff;
+    LineColor: #a3a8ad;
+    LineStyle: 0;
+    LineThickness: 2;
+    FontColor: #16324f;
+    FontSize: 24;
+    HorizontalAlignment: center;
+    Shadowing: 0;
+  }
+</style>
+
+rectangle "==Firebase Cloud Messaging\n<size:16>[Software System]</size>\n\nEntrega notificaciones" <<Element-RWxlbWVudA==>> as FirebaseCloudMessaging
+rectangle "==Weather API\n<size:16>[Software System]</size>\n\nTemperatura y humedad por coordenadas, US-29" <<Element-RWxlbWVudA==>> as WeatherAPI
+rectangle "==Email Service\n<size:16>[Software System]</size>\n\nNotificaciones y recuperacion de acceso" <<Element-RWxlbWVudA==>> as EmailService
+
+rectangle "PredictiveMaintain\n<size:16>[Software System]</size>" <<Boundary-UHJlZGljdGl2ZU1haW50YWlu>> {
+  rectangle "Maintenance Operations API\n<size:16>[Container: NestJS / TypeScript]</size>" <<Boundary-TWFpbnRlbmFuY2UgT3BlcmF0aW9ucyBBUEk=>> {
+    rectangle "==Maintenance Controllers\n<size:16>[Component: NestJS controllers]</size>\n\nValida recursos y expone REST" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceControllers
+    rectangle "==Application Handlers\n<size:16>[Component: TypeScript]</size>\n\nRegisterAssetHandler, RegisterAlertHandler, ConfirmAlertHandler, CreateWorkOrderHandler, DiscardAlertHandler, GetAssetWeatherHandler, AssignWorkOrderHandler, StartWorkOrderHandler, CompleteWorkOrderHandler, SyncOperationsHandler" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.MaintenanceOperationsAPI.ApplicationHandlers
+    rectangle "==Domain Model\n<size:16>[Component: TypeScript]</size>\n\nAsset, Alert, WorkOrder, EvidencePhoto, WorkOrderChange" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.MaintenanceOperationsAPI.DomainModel
+    rectangle "==PostgresMaintenanceRepository\n<size:16>[Component: PostgreSQL adapter]</size>\n\nImplementa IMaintenanceRepository" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.MaintenanceOperationsAPI.PostgresMaintenanceRepository
+    rectangle "==Anomaly Consumer + ACL\n<size:16>[Component: RabbitMQ client / TypeScript]</size>\n\nDeduplica y traduce eventos" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.MaintenanceOperationsAPI.AnomalyConsumerACL
+    rectangle "==Maintenance Adapters\n<size:16>[Component: HTTP / file adapter]</size>\n\nCapacidad, identidad, fotos y notificaciones" <<Element-RWxlbWVudCxDb21wb25lbnQ=>> as PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters
+  }
+
+  rectangle "==API Gateway\n<size:16>[Container: Nginx]</size>\n\nTermina TLS y enruta" <<Element-RWxlbWVudA==>> as PredictiveMaintain.APIGateway
+  rectangle "==Event Broker\n<size:16>[Container: RabbitMQ propuesto]</size>\n\nEntrega eventos con reintentos" <<Element-RWxlbWVudA==>> as PredictiveMaintain.EventBroker
+  rectangle "==Evidence Storage\n<size:16>[Container: Volumen persistente]</size>\n\nImagenes de intervenciones" <<Element-RWxlbWVudA==>> as PredictiveMaintain.EvidenceStorage
+  rectangle "==Maintenance Database\n<size:16>[Container: PostgreSQL]</size>\n\nPersistencia exclusiva del contexto" <<Element-RWxlbWVudA==>> as PredictiveMaintain.MaintenanceDatabase
+  rectangle "==Subscription & Billing API\n<size:16>[Container: NestJS / TypeScript]</size>\n\nPlanes, suscripciones y capacidad" <<Element-RWxlbWVudA==>> as PredictiveMaintain.SubscriptionBillingAPI
+  rectangle "==Identity & Access Management API\n<size:16>[Container: NestJS / TypeScript]</size>\n\nIdentidad, autenticacion y roles" <<Element-RWxlbWVudA==>> as PredictiveMaintain.IdentityAccessManagementAPI
+}
+
+PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters --> PredictiveMaintain.SubscriptionBillingAPI <<Relationship-UmVsYXRpb25zaGlw>> : "Reserva / confirma cupo\n<size:16>[HTTP privado]</size>"
+PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters --> PredictiveMaintain.IdentityAccessManagementAPI <<Relationship-UmVsYXRpb25zaGlw>> : "Verifica tecnico\n<size:16>[HTTP privado]</size>"
+PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters --> PredictiveMaintain.EvidenceStorage <<Relationship-UmVsYXRpb25zaGlw>> : "Guarda / recupera evidencia\n<size:16>[Filesystem privado]</size>"
+PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters --> FirebaseCloudMessaging <<Relationship-UmVsYXRpb25zaGlw>> : "Solicita notificacion\n<size:16>[HTTPS]</size>"
+PredictiveMaintain.APIGateway --> PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceControllers <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta solicitudes REST\n<size:16>[HTTP privado]</size>"
+PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceControllers --> PredictiveMaintain.MaintenanceOperationsAPI.ApplicationHandlers <<Relationship-UmVsYXRpb25zaGlw>> : "Invoca casos de uso"
+PredictiveMaintain.MaintenanceOperationsAPI.ApplicationHandlers --> PredictiveMaintain.MaintenanceOperationsAPI.DomainModel <<Relationship-UmVsYXRpb25zaGlw>> : "Aplica reglas"
+PredictiveMaintain.MaintenanceOperationsAPI.ApplicationHandlers --> PredictiveMaintain.MaintenanceOperationsAPI.PostgresMaintenanceRepository <<Relationship-UmVsYXRpb25zaGlw>> : "Usa puerto de repositorio"
+PredictiveMaintain.MaintenanceOperationsAPI.PostgresMaintenanceRepository --> PredictiveMaintain.MaintenanceOperationsAPI.DomainModel <<Relationship-UmVsYXRpb25zaGlw>> : "Implementa contrato del dominio"
+PredictiveMaintain.MaintenanceOperationsAPI.PostgresMaintenanceRepository --> PredictiveMaintain.MaintenanceDatabase <<Relationship-UmVsYXRpb25zaGlw>> : "Lee y escribe\n<size:16>[SQL]</size>"
+PredictiveMaintain.APIGateway --> PredictiveMaintain.SubscriptionBillingAPI <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta\n<size:16>[HTTP privado]</size>"
+PredictiveMaintain.APIGateway --> PredictiveMaintain.IdentityAccessManagementAPI <<Relationship-UmVsYXRpb25zaGlw>> : "Enruta\n<size:16>[HTTP privado]</size>"
+PredictiveMaintain.EventBroker --> PredictiveMaintain.MaintenanceOperationsAPI.AnomalyConsumerACL <<Relationship-UmVsYXRpb25zaGlw>> : "Entrega eventos\n<size:16>[AMQP privado]</size>"
+PredictiveMaintain.MaintenanceOperationsAPI.AnomalyConsumerACL --> PredictiveMaintain.MaintenanceOperationsAPI.ApplicationHandlers <<Relationship-UmVsYXRpb25zaGlw>> : "Traduce y procesa"
+PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters --> WeatherAPI <<Relationship-UmVsYXRpb25zaGlw>> : "Consulta clima US-29\n<size:16>[HTTPS]</size>"
+PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters --> EmailService <<Relationship-UmVsYXRpb25zaGlw>> : "Notificaciones EMAIL\n<size:16>[HTTPS]</size>"
+PredictiveMaintain.IdentityAccessManagementAPI --> EmailService <<Relationship-UmVsYXRpb25zaGlw>> : "Enlace de recuperacion US-22\n<size:16>[HTTPS]</size>"
+PredictiveMaintain.MaintenanceOperationsAPI.ApplicationHandlers --> PredictiveMaintain.MaintenanceOperationsAPI.MaintenanceAdapters <<Relationship-UmVsYXRpb25zaGlw>> : "Solicita servicios externos"
+
+@enduml

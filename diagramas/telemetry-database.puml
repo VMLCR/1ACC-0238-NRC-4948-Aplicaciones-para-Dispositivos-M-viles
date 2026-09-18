@@ -1,0 +1,79 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classBackgroundColor #EEF4FB
+skinparam classBorderColor #24527A
+hide empty members
+
+title Asset Telemetry & Analytics - Database Design (PostgreSQL)
+
+entity "sensors" as Sensor {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * asset_id: uuid
+  {field} * metric: varchar(40)
+  {field} * unit: varchar(20)
+  {field} * active: boolean
+  {field}  last_received_at: timestamptz
+}
+entity "sensor_readings" as SensorReading {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * sensor_id: uuid <<FK>>
+  {field} * source_key: varchar(100)
+  {field} * value: numeric
+  {field} * unit: varchar(20)
+  {field} * measured_at: timestamptz
+  {field} * received_at: timestamptz
+}
+entity "threshold_rules" as ThresholdRule {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * sensor_id: uuid <<FK>>
+  {field} * lower_bound: numeric
+  {field} * upper_bound: numeric
+  {field} * severity: varchar(20)
+  {field} * version: integer
+}
+entity "anomaly_detections" as AnomalyDetection {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * reading_id: uuid <<FK>>
+  {field} * rule_id: uuid <<FK>>
+  {field} * rule_version: integer
+  {field} * lower_snapshot: numeric
+  {field} * upper_snapshot: numeric
+  {field} * severity: varchar(20)
+  {field} * detected_at: timestamptz
+}
+entity "rul_estimates" as RulEstimate {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * asset_id: uuid
+  {field} * hours_remaining: numeric
+  {field} * model_version: varchar(80)
+  {field} * estimated_at: timestamptz
+  {field} * confidence: numeric
+}
+Sensor ||--o{ SensorReading : origina
+Sensor ||--o| ThresholdRule : configura
+SensorReading ||--o| AnomalyDetection : produce
+ThresholdRule ||--o{ AnomalyDetection : fundamenta
+entity "outbox_events" as Outbox {
+ {field} * event_id: uuid <<PK>>
+ {field} * tenant_id: uuid
+ {field} * event_type: varchar(80)
+ {field} * payload: jsonb
+ {field} * occurred_at: timestamptz
+ {field} published_at: timestamptz
+}
+legend bottom
+* NOT NULL. PK: primary key.
+Las FKs compuestas, unicidad y CHECK se detallan en el informe.
+Los identificadores de otros contextos no son FKs entre bases.
+endlegend
+@enduml

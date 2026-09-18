@@ -1,0 +1,64 @@
+@startuml
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classBackgroundColor #EEF4FB
+skinparam classBorderColor #24527A
+hide empty members
+
+title Subscription & Billing - Database Design (PostgreSQL)
+
+entity "companies" as Company {
+  {field} * id: uuid <<PK>>
+  {field} * name: varchar(150)
+  {field} * active: boolean
+}
+entity "subscription_plans" as SubscriptionPlan {
+  {field} * id: uuid <<PK>>
+  {field} * name: varchar(60)
+  {field} * asset_limit: integer
+  {field} * amount: numeric(12,2)
+  {field} * currency: char(3)
+}
+entity "subscriptions" as Subscription {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid <<FK>>
+  {field} * plan_id: uuid <<FK>>
+  {field} * asset_limit: integer
+  {field} * status: varchar(20)
+  {field} * starts_at: timestamptz
+  {field} * ends_at: timestamptz
+}
+entity "capacity_reservations" as CapacityReservation {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * subscription_id: uuid <<FK>>
+  {field} * operation_id: uuid
+  {field} * asset_id: uuid
+  {field} * status: varchar(20)
+  {field} * created_at: timestamptz
+}
+entity "invoices" as Invoice {
+  {field} * id: uuid <<PK>>
+  {field} * tenant_id: uuid
+  {field} * subscription_id: uuid <<FK>>
+  {field} * number: varchar(50)
+  {field} * amount: numeric(12,2)
+  {field} * currency: char(3)
+  {field} * status: varchar(20)
+  {field} * issued_at: timestamptz
+  {field}  payment_reference: varchar(120)
+}
+Company ||--o| Subscription : contrata
+SubscriptionPlan ||--o{ Subscription : define oferta
+Subscription ||--o{ CapacityReservation : contiene
+Subscription ||--o{ Invoice : genera
+legend bottom
+* NOT NULL. PK: primary key.
+Las FKs compuestas, unicidad y CHECK se detallan en el informe.
+Los identificadores de otros contextos no son FKs entre bases.
+endlegend
+@enduml

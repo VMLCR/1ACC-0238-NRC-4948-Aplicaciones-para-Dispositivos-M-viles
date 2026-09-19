@@ -905,6 +905,10 @@ El Product Backlog consolida las User Stories, Technical Stories y Spike Stories
 | 40 | US-18 | Consultar consumo actual de la suscripción | 2 | Sprint 3 |
 | 41 | US-19 | Recibir notificación de vencimiento de suscripción | 3 | Sprint 3 |
 
+![Product Backlog](assets/cap2/productBacklog/productBacklog1.png)
+
+**Link:** [Product Backlog — PredictiveMaintain](https://trello.com/b/BsUOrdam)
+
 ## 2.5. Strategic-Level Domain-Driven Design
 
 En esta sección se introducen y explican las decisiones de nivel estratégico aplicando Domain-Driven Design (DDD) para descomponer el sistema PredictiveMaintain en subconjuntos con límites naturales o Bounded Contexts.  
